@@ -20,5 +20,11 @@ $(document).ready(function(){
         $($(this).attr("href")).addClass("show");
         
     });
+    $(".potensi-box .next").click(function(nx){
+        nx.preventDefault();
+        $(this).parent().parent().removeClass("show");
+        $($(this).attr("href")).addClass("show");
+        
+    });
 
 }); 
