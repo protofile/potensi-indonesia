@@ -5,6 +5,9 @@
 
 *{
     color: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 p, div, li, a{
     font-family: 'Electrolize', sans-serif;
@@ -50,6 +53,7 @@ a{text-decoration: none;}
 .bt.bt-text:hover{
     opacity: 1;
 }
+
 
 @keyframes door1 {
     0%   {top: 0; transform: rotate(0); -moz-transform: rotate(0); -webkit-transform: rotate(0);}
@@ -496,3 +500,143 @@ a{text-decoration: none;}
 }
 
 /*POTENSI BOX*/
+
+/* DETAIL PI */
+.detail{
+    width: 100vw;
+    position: fixed;
+    height: 100vh;
+    background: url(../images/bg-detail-page.png) no-repeat center;
+    background-size: cover;
+}
+.detail .popup-detail{
+    background: url(../images/bg-popup-3.png) no-repeat center;
+    background-size: contain;
+    background-position: center;
+    width: 900px;
+    height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding:0 100px ;
+}
+.film-list .item{
+    padding: 10px;
+    width: 100%;
+    float: left;
+}
+.frame{
+    width: 100%;
+    float: left;
+}
+.frame figure{
+    width: 100%;
+    float: left;
+    background: url(../images/frame-detail-banner-1.png) no-repeat center;
+    background-size: contain;
+    height:0; 
+    position: relative;
+    padding-top: 130%;
+    margin: 0;
+}
+.frame figure img{
+    width: 84%;
+    height: 97%;
+    object-fit: cover;
+    position: absolute;
+    top: 3%;
+    left: 8%;
+}
+.frame .text h3{
+    font-size:13px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 10px;
+}
+.frame .text p{
+    font-size: 9px;
+    position: relative;
+    padding-left: 18px;
+    width: 100%;
+    float: left;
+}
+.frame .text p img{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 0;
+}
+.detail-card .frame .text{
+    position: relative;
+    top: 211px;
+}
+.detail-card .frame .text h6{
+    margin-bottom: 0;
+}
+.detail-card .frame .text p img{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.title-detail{
+    text-align: center;
+    width: 100%;
+    float: left;    
+}
+.title-detail h4{
+    margin-top: 70px;
+}
+.popup-detail h3{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 8;
+    position: relative;
+    float: left;
+}
+
+.film-list .owl-prev,
+.film-list .owl-next{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    overflow: hidden ;
+    text-indent: -9999px;
+}
+.film-list .owl-prev{
+    left: -30px;
+    background: url(../images/arrow-left.png) no-repeat center;
+    background-size: contain;
+}
+.film-list .owl-next{
+    right: -30px;
+    background: url(../images/arrow-right.png) no-repeat center;
+    background-size: contain;
+}
+.btn-artis{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.btn-artis a{
+    padding-top: 3px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 7px;
+}
+.btn-artis img{
+    width: 15px;
+    height: 15px;
+}
+/* DETAIL PI */
