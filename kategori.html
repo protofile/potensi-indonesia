@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+        <div class="detail-preloader closed">
+            <div class="top-door"></div>
+            <div class="bottom-door"></div>
+        </div>
+        <div class="master">
+            <div class="scene cokcpit active">
+                <div class="cockpit-bg show">
+                    <video autoplay muted loop>
+                        <source src="assets/videos/cockpit.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="potensi-box" class="potensi-box show">
+                    <h3 class="potensi-title">POTENSI INDONESIA</h3>
+                    <div class="potensi-cards">
+                        <div class="potensi-item">
+                            <div class="wrap">
+                                <div class="pic">
+                                    <img src="assets/images/iso-geografis.png" alt="">
+                                </div>
+                                <p>Geografis</p>
+                            </div>
+                            <a href="#">Geografis</a>
+                        </div>
+                        <div class="potensi-item">
+                            <div class="wrap">
+                                <div class="pic">
+                                    <img src="assets/images/iso-umkm.png" alt="">
+                                </div>
+                                <p>UMKM</p>
+                            </div>
+                            <a href="#">UMKM</a>
+                        </div>
+                        <div class="potensi-item">
+                            <div class="wrap">
+                                <div class="pic">
+                                    <img src="assets/images/iso-pariwisata.png" alt="">
+                                </div>
+                                <p>Industri Pariwisata</p>
+                            </div>
+                            <a href="#">Industri Pariwisata</a>
+                        </div>
+                        <div class="potensi-item">
+                            <div class="wrap">
+                                <div class="pic">
+                                    <img src="assets/images/iso-olahraga.png" alt="">
+                                </div>
+                                <p>Olahraga</p>
+                            </div>
+                            <a href="#">Olahraga</a>
+                        </div>
+                        <div class="potensi-item">
+                            <div class="wrap">
+                                <div class="pic">
+                                    <img src="assets/images/iso-hiburan.png" alt="">
+                                </div>
+                                <p>Industri Hiburan</p>
+                            </div>
+                            <a href="detail-industri-hiburan.html">Industri Hiburan</a>
+                        </div>
+                        <div class="potensi-item">
+                            <div class="wrap">
+                                <div class="pic">
+                                    <img src="assets/images/iso-anak-bangsa.png" alt="">
+                                </div>
+                                <p>Anak Bangsa</p>
+                            </div>
+                            <a href="#">Anak Bangsa</a>
+                        </div>
+                        <div class="potensi-item">
+                            <div class="wrap">
+                                <div class="pic">
+                                    <img src="assets/images/iso-bisnis.png" alt="">
+                                </div>
+                                <p>Bisnis</p>
+                            </div>
+                            <a href="#">Bisnis</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="next bt bt-primary" href="#dialog-7">Selanjutnya</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="space-cursor"></div>
+        <div class="space-cursor-2"></div>
+        <script src="assets/js/js-v3.6.0.js"></script>
+        <script src="assets/js/lottie.js"></script>
+        <script src="assets/js/typewriter.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                    $(".detail-preloader").toggleClass("open closed");
+                    setTimeout(function(){
+                        $(".detail").removeClass("shrink");
+                    }, 200);
+                }, 5000);
+            });
+        </script>
+    </body>
+</html>
