@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     $(".id-link").click(function(il){
         il.preventDefault();
-        $(this).parent().parent().removeClass("show");
+        $(".popup-detail").removeClass("show");
         $($(this).attr("href")).addClass("show");
     });
 
