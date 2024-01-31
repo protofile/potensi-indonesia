@@ -623,12 +623,17 @@ ul{
     transform: translate(-50%,-50%) scale(1) rotateX(0);
     opacity: 1;
 }
+
 .frame .text h3{
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size:16px;
     text-align: center;
     overflow: hidden;
     width: 100%;
     padding-top: 10px;
+    box-sizing: border-box;
+    display: inline-block;
 }
 .frame .text h5{
     font-size:13px;
@@ -706,12 +711,13 @@ ul{
     background: url(../images/arrow-right.png) no-repeat center;
     background-size: 13px 20px;
 }
-.btn-group-2{
+/* .btn-group-2{
     display: flex;
     justify-content: center;
     margin-top: 10px;
     width: 100%;
     float: left;
+    
 }
 .btn-group-2 a{
     padding-top: 3px;
@@ -724,12 +730,62 @@ ul{
     align-items: center;
     color: #ff9900;
     margin: 0 20px;
+    
+} */
+.btn-group-2 .container {
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items:end;
 }
-.btn-group-2 img{
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
+
+.btn-group-2 .center {
+  width: 180px;
+  height: 40px;
+  position: fixed;
 }
+
+.btn-group-2 .btn {
+  width: 180px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.btn-group-2 svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn-group-2  .btn:hover {
+  transition: 1s ease-in-out;
+  background: transparent;
+}
+
+.btn-group-2  .btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn-group-2 .btn span {
+  color: white;
+  font-size: 10px;
+  font-weight: 100;
+}
+
 /* DETAIL PI */
 
 /*DETAIL PRELOADER*/
