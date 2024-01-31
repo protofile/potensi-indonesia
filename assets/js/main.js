@@ -69,4 +69,13 @@ $(document).ready(function(){
             $(".potensi-box").addClass("show");
         }, 800);
     });
+
+    /*TAB*/
+    $(".tab-nav li a").click(function(tla){
+        tla.preventDefault();
+        $(".tab-nav li a").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-ct").removeClass("show")
+        $($(this).attr("href")).addClass("show");
+    });
 }); 

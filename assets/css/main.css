@@ -50,11 +50,11 @@ ul{
     -webkit-transition: all ease-out 0.3s;
 }
 .bt.bt-primary{
-    background: url(../images/bg-btn.png) no-repeat center;
+    background: url(../images/bg-btn.webp) no-repeat center;
     background-size: contain;
 }
 .bt.bt-primary:hover{
-    background: url(../images/bg-btn-hover.png) no-repeat center;
+    background: url(../images/bg-btn-hover.webp) no-repeat center;
     background-size: contain;
 }
 .bt.bt-text{
@@ -278,7 +278,7 @@ ul{
     transition: all ease-out 0.3s;
     -moz-transition: all ease-out 0.3s;
     -webkit-transition: all ease-out 0.3s;
-    background: url(../images/bg-popup-1.png) no-repeat center;
+    background: url(../images/bg-popup-1.webp) no-repeat center;
     background-size: contain;
     opacity: 0;
     pointer-events: none;
@@ -362,7 +362,7 @@ ul{
     transition: all ease-out 0.8s;
     -moz-transition: all ease-out 0.8s;
     -webkit-transition: all ease-out 0.8s;
-    background: url(../images/bg-popup-2.png) no-repeat center top;
+    background: url(../images/bg-popup-2.webp) no-repeat center top;
     background-size: cover;
     opacity: 0;
     pointer-events: none;
@@ -387,7 +387,7 @@ ul{
     perspective: 400px;
 }
 .potensi-item .wrap{
-    background: url(../images/bg-card-type-1.png) no-repeat center;
+    background: url(../images/bg-card-type-1.webp) no-repeat center;
     background-size: contain;
     height: 240px;
     width: 180px;
@@ -526,14 +526,14 @@ ul{
     width: 100vw;
     position: fixed;
     height: 100vh;
-    /*background: url(../images/bg-detail-page.png) no-repeat center;*/
+    /*background: url(../images/bg-detail-page.webp) no-repeat center;*/
     background-size: cover;
     transition: all ease-out 0.3s;
     -moz-transition: all ease-out 0.3s;
     -webkit-transition: all ease-out 0.3s;
 }
 .detail .popup-detail{
-    background: url(../images/bg-popup-3.png) no-repeat center;
+    background: url(../images/bg-popup-3.webp) no-repeat center;
     background-size: contain;
     background-position: center;
     width: 1024px;
@@ -574,7 +574,7 @@ ul{
 .frame figure{
     width: 100%;
     float: left;
-    background: url(../images/frame-detail-banner-1.png) no-repeat center;
+    background: url(../images/frame-detail-banner-1.webp) no-repeat center;
     background-size: contain;
     height:0; 
     position: relative;
@@ -595,7 +595,7 @@ ul{
     transition: all ease-out 0.3s;
 }
 .frame figure .caption{
-    width: 80%;
+    width: 120%;
     height: 90%;
     margin: 0;
     padding: 20px;
@@ -703,12 +703,12 @@ ul{
 }
 .film-list .owl-prev{
     left: -40px;
-    background: url(../images/arrow-left.png) no-repeat center;
+    background: url(../images/arrow-left.webp) no-repeat center;
     background-size: 13px 20px;
 }
 .film-list .owl-next{
     right: -40px;
-    background: url(../images/arrow-right.png) no-repeat center;
+    background: url(../images/arrow-right.webp) no-repeat center;
     background-size: 13px 20px;
 }
 /* .btn-group-2{
@@ -732,42 +732,35 @@ ul{
     margin: 0 20px;
     
 } */
-.btn-group-2 .container {
-  width: 400px;
-  height: 400px;
-  position: fixed;
-  left: 50%;
-  top: 58%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items:end;
-}
 
-.btn-group-2 .center {
-  width: 180px;
-  height: 40px;
-  position: fixed;
+.btn-group-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    float: left;
 }
-
 .btn-group-2 .btn {
-  width: 180px;
+  width: 300px;
   height: 40px;
   cursor: pointer;
   background: transparent;
   border: 1px solid #91C9FF;
   outline: none;
   transition: 1s ease-in-out;
+  text-align: center;
+  padding-top: 8px;
+  position: relative;
 }
 
-.btn-group-2 svg {
+.btn-group-2 .btn svg {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -2px;
   fill: none;
   stroke: #fff;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
+  stroke-dasharray: 300 480;
+  stroke-dashoffset: 300;
   transition: 1s ease-in-out;
 }
 
@@ -782,7 +775,7 @@ ul{
 
 .btn-group-2 .btn span {
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 100;
 }
 
@@ -851,9 +844,9 @@ ul{
     cursor: none;
   }
 .space-cursor{
-    width: 25px;
-    height: 40px;
-    background: url(../images/space-cursor.png) no-repeat center;
+    width: 15px;
+    height: 24px;
+    background: url(../images/space-cursor.webp) no-repeat center;
     background-size: contain;
     position: absolute;
     z-index: 99999;
@@ -926,11 +919,11 @@ ul{
     position: fixed;
     top: 0;
     right: -50px;
-    background: url(../images/close-bt.png) no-repeat center;
+    background: url(../images/close-bt.webp) no-repeat center;
     background-size: contain;
 }
 .detail-box .close-bt:hover{
-    background: url(../images/close-bt-hover.png) no-repeat center;
+    background: url(../images/close-bt-hover.webp) no-repeat center;
 }
 /*DETAIL BOX*/
 
@@ -1038,7 +1031,7 @@ ul{
     transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
-    background: url(../images/bg-bisnis-circle.jpg) no-repeat center;
+    background: url(../images/bg-bisnis-circle.webp) no-repeat center;
     background-size: cover;
 }
 .brands-circle .text{
@@ -1079,3 +1072,213 @@ ul{
 .brands li:nth-child(10){top: -5%; left: 14%;}
 
 /*BISNIS CT*/
+
+/*TAB OLAHRAGA*/
+.tab-wrap{
+    width: 100%;
+    float: left;
+    margin-top: 80px;
+    position: relative;
+    min-height: 430px;
+}
+.tab-nav{
+    width: 30%;
+    float: right;
+}
+.tab-nav li{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.tab-nav li a{
+    padding: 17px 10px 10px;
+    display: block;
+    background: url(../images/tab-bt.png) no-repeat center;
+    background-size: contain;
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+    width: 207px;
+    height: 60px;
+}
+.tab-nav li a:hover,
+.tab-nav li a.active{
+    background: url(../images/tab-bt-hover.png) no-repeat center;
+    background-size: contain;
+}
+.tab-ct{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    -moz-transform: translateY(-50%) scale(0.8);
+    -webkit-transform: translateY(-50%) scale(0.8);
+    padding: 0 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+}
+.tab-ct.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -webkit-transform: translateY(-50%) scale(1);
+}
+.medali-asian-games .item{
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 0 20px;
+}
+.medali-asian-games .item .circle{
+    width: 100px;
+    height: 100px;
+    padding: 30px 20px;
+    background: url(../images/circle-1.png) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+}
+.medali-asian-games .item .circle span{
+    width: 100%;
+    float: left;
+    font-size: 10px;
+}
+.medali-asian-games .item p{
+    margin: 0 0 5px;
+    font-size: 15px;
+    width: 100%;
+    float: left;
+}
+.medali-asian-games .item p span{
+    float: right;
+    width: 30px;
+}
+.medali-asian-games .owl-prev,
+.medali-asian-games .owl-next{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: calc(50% - 20px);
+    overflow: hidden;
+    text-indent: -200px;
+}
+.medali-asian-games .owl-prev{
+    right: 100%;
+    margin-right: 5px;
+    background: url(../images/arrow-left.webp) no-repeat center;
+    background-size: 15px;
+}
+.medali-asian-games .owl-next{
+    left: 100%;
+    margin-left: 5px;
+    background: url(../images/arrow-right.webp) no-repeat center;
+    background-size: 15px;
+}
+
+.contingen{
+    display: flex;
+    width: 100%;
+    float: left;
+    justify-content: space-around;
+}
+.contingen .column{
+    width: 220px;
+}
+.contingen .column .pic{
+    width: 220px;
+    height: 300px;
+    background: #ccc;
+    float: left;
+    margin-bottom: 20px;
+}
+.contingen .column .pic img{
+    width: 100%;
+}
+.contingen .column .text{
+    text-align: center;
+}
+.contingen .column .text h4{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.contingen .column p{
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 0;
+}
+/*TAB OLAHRAGA*/
+
+/*TAB PARIWISATA*/
+.lists{
+    width: 100%;
+    float: left;
+    column-count: 2;
+    margin-bottom: 30px;
+}
+.lists li{
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+.lists li h4{
+    margin: 0 0 10px;
+}
+.lists li p{
+    margin: 0;
+}
+/*TAB PARIWISATA*/
+
+/*UMKM*/
+.ukm-berhasil-ekspor{
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+.ukm-berhasil-ekspor .item{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+.ukm-berhasil-ekspor .item .pic{
+    width: 300px;
+    height: 300px;
+    background: #ccc;
+}
+.ukm-berhasil-ekspor .item .text{
+    width: calc(100% - 200px);
+    float: left;
+    padding-left: 40px;
+}
+.ukm-berhasil-ekspor .owl-prev,
+.ukm-berhasil-ekspor .owl-next{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: calc(50% - 20px);
+    overflow: hidden;
+    text-indent: -200px;
+}
+.ukm-berhasil-ekspor .owl-prev{
+    right: 100%;
+    margin-right: 5px;
+    background: url(../images/arrow-left.webp) no-repeat center;
+    background-size: 15px;
+}
+.ukm-berhasil-ekspor .owl-next{
+    left: 100%;
+    margin-left: 5px;
+    background: url(../images/arrow-right.webp) no-repeat center;
+    background-size: 15px;
+}
+/*UMKM*/
