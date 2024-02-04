@@ -1214,6 +1214,9 @@ ul{
     line-height: 150%;
     margin-bottom: 0;
 }
+.total-medali-sea-games .item .pic img{
+    width: 60%;
+}
 /*TAB OLAHRAGA*/
 
 /*TAB PARIWISATA*/
@@ -1435,4 +1438,155 @@ ul{
     background: url(../images/back-bt-bg.png) no-repeat right center;
     background-size: contain;
     padding: 10px 50px 10px 30px;
+}
+#geografis-pertanian{
+    text-align: center;
+}
+#geografis-pertanian h4{
+    padding-top: 90px;
+}
+#geografis-pertanian .info-pertanian h4{
+    padding-top: 40px;
+    padding-bottom: 0;
+    margin:0 0;
+}
+#geografis-pertanian .info-pertanian .text{
+    padding-top: 0;
+    font-size: 14px;
+}
+#geografis-kelautan{
+    text-align: center;
+}
+#geografis-kelautan h4{
+    padding-top: 90px;
+}
+#geografis-kelautan .tab-wrap{
+    margin-top: 0;
+}
+#geografis-kelautan .tab-wrap .tab-nav{
+    margin-top: 60px;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-1{
+    text-align: start;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-1 .fact-kelautan li{
+    margin-top: 15px;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-2{
+    text-align: start;
+    padding-top: 10px;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-2 h4{
+    padding-top: 0;
+    margin-bottom: 0;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-2 p{
+    margin-top: 0;
+}
+#tab-kelautan-2 ul{
+    column-count: 1;
+    padding-left: 0;
+}
+#tab-kelautan-2 ul li{
+    width: 50%;
+    float: left;
+}
+#tab-kelautan-2 ul li p{
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-3{
+    text-align: start;
+    padding-top: 90px;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-3 ul li{
+    margin-top: 20px;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-4{
+    text-align: start;
+    padding-top: 0px;
+}
+#geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan li{
+    margin-top: 20px;
+}
+#geografis-pertambangan{
+    text-align: center;
+}
+#geografis-pertambangan h4{
+    padding-top: 90px;
+}
+#geografis-pertambangan .tab-wrap{
+    margin-top: 0;
+}
+#geografis-pertambangan .tab-wrap .tab-nav{
+    margin-top: 90px;
+}
+#geografis-pertambangan .tab-wrap #tab-pertambangan-1{
+    text-align: start;
+    padding-top: 0px;
+}
+#geografis-pertambangan .tab-wrap #tab-pertambangan-1 li{
+    padding-top: 20px;
+}
+#geografis-pertambangan #tab-pertambangan-2 h4{
+    padding-top: 5px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+#geografis-pertambangan #tab-pertambangan-2 ul li p{
+    margin-top: 0;
+}
+#geografis-pertambangan #tab-pertambangan-2 ul{
+    display: flex;
+}
+#geografis-pertambangan #tab-pertambangan-2 ul li{
+    width: 30%;
+}
+#tab-pertambangan-2 ul .pic{
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    padding: 5px;;
+}
+#tab-pertambangan-2 ul .pic::before{
+    content: "";
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    background: url(../images/circle-1.png);
+    background-size: contain;
+    opacity: 0.5;
+    margin-left: 50px;
+}
+#tab-pertambangan-2 ul .pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 50px;
+}
+#geografis-kehutanan{
+    text-align: center;
+}
+#geografis-kehutanan h4{
+    padding-top: 90px;
+}
+#geografis-kehutanan .tab-wrap{
+    margin-top: 0;
+}
+#geografis-kehutanan .tab-wrap .tab-nav{
+    margin-top: 90px;
+}
+#geografis-kehutanan .tab-wrap #tab-kehutanan-1{
+    text-align: start;
+    padding-top: 0px;
+}
+#geografis-kehutanan .tab-wrap #tab-kehutanan-1 ul li{
+    padding-top: 0;
+}
+#geografis-kehutanan .tab-wrap #tab-kehutanan-3 ul li{
+    padding-top: 15px;
+    text-align: start;
 }
