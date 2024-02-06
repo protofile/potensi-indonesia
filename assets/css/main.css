@@ -33,7 +33,7 @@ html,body{
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: #000;
+    background: #062262;
 }
 
 .scene{
@@ -1820,6 +1820,7 @@ html,body{
     }
     .potensi-box.show{
         top: 0;
+        padding-bottom: 100px;
     }
     .potensi-title{
         font-size: 24px;
@@ -2220,5 +2221,9 @@ html,body{
     }
     #geografis-kehutanan .tab-wrap #tab-kehutanan-3 ul li{
         font-size: 14px;
+    }
+
+    .popup{
+        top: calc(50% - 60px);
     }
 }
