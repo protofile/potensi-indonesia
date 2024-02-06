@@ -756,12 +756,12 @@ html,body{
   height: 40px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #91C9FF;
   outline: none;
   transition: 1s ease-in-out;
   text-align: center;
   padding-top: 8px;
   position: relative;
+  color: #ffdd00;
 }
 
 .btn-group-2 .btn svg {
@@ -773,6 +773,7 @@ html,body{
   stroke-dasharray: 300 480;
   stroke-dashoffset: 300;
   transition: 1s ease-in-out;
+  display: none;
 }
 
 .btn-group-2  .btn:hover {
@@ -785,7 +786,7 @@ html,body{
 }
 
 .btn-group-2 .btn span {
-  color: white;
+  color: #ff9900;
   font-size: 14px;
   font-weight: 100;
 }
@@ -1813,6 +1814,29 @@ html,body{
     font-size: 16px;
 }
 
+.atlet-asian-games-berprestasi .item{
+    padding: 10px;
+}
+.atlet-asian-games-berprestasi .item .pic{
+    width: 100%;
+    height: 0;
+    padding-top: 130%;
+    position: relative;
+    background: url(../images/frame-detail-banner-1.webp) no-repeat center;
+    background-size: contain;
+}
+.atlet-asian-games-berprestasi .item .pic img{
+    position: absolute;
+    width: 83%;
+    height: 90%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
 @media only screen and (max-width: 768px){
     .space-cursor,
     .space-cursor-2{
@@ -2090,6 +2114,12 @@ html,body{
         float: left;
         font-size: 14px;
     }
+    #ukm-sukses p{
+        margin-top: 0;
+    }
+    .ukm-berhasil-ekspor{
+        margin-bottom: 20px;
+    }
     .statistik-umkm .box p{
         margin: 0 0 10px;
         text-align: left;
@@ -2117,7 +2147,7 @@ html,body{
         margin-left: calc((100% - 300px) / 2);
     }
     .ukm-berhasil-ekspor .item .pic{
-        margin: 0 auto 20px;
+        margin: 0 auto;
         width: 100px;
         height: 100px;
         padding: 5%;
@@ -2132,6 +2162,7 @@ html,body{
     .ukm-berhasil-ekspor h3{
         text-align: center;
         font-size: 16px;
+        margin-bottom: 10px;
     }
     .ukm-berhasil-ekspor h3::after{
         left: calc(50% - 30px);
@@ -2230,5 +2261,43 @@ html,body{
 
     .popup{
         top: calc(50% - 60px);
+    }
+    #pariwisata .tab-wrap{
+        margin-top: 20px;
+    }
+    #pariwisata .tab-wrap .tab-nav{
+        margin-bottom: 0;
+    }
+    .atlet-asian-games-berprestasi .item .text h4{
+        white-space: nowrap;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    .atlet-asian-games-berprestasi .item .text p{
+        margin: 0;
+        font-size: 14px;
+        color: rgba(255,255,255,0.8);
+    }
+    .tab-nav li a{
+        background: url(../images/tab-bt-mobile.png) no-repeat center;
+        background-size: contain;
+    }
+    .tab-nav li a:hover,
+    .tab-nav li a.active{
+        background: url(../images/tab-bt-hover-mobile.png) no-repeat center;
+        background-size: contain;
+    }
+    .bisnis-ct .column{
+        margin-top: 0;
+    }
+    ul.sector{
+        padding-left: 0;
+        margin-bottom: 40px;
+    }
+    ul.sector li{
+        font-size: 14px;
     }
 }
