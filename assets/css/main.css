@@ -23,6 +23,11 @@ ul{
     list-style: none;
     margin: 0;
 }
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 .master{
     width: 100vw;
     height: 100vh;
@@ -1377,6 +1382,9 @@ ul{
     font-size: 14px;
     color: rgba(255,255,255,0.6);
 }
+#tab-pariwisata-1 p{
+    line-height: 150%;
+}
 #tab-pariwisata-4 .lists{
     column-count: 1;
     padding-left: 0;
@@ -1425,6 +1433,9 @@ ul{
     float: left;
     padding: 20px;
 }
+.pariwisata-4-slider .item p{
+    line-height: 150%;
+}
 /*UMKM*/
 
 /*GEOGRAFIS*/
@@ -1471,7 +1482,18 @@ ul{
     text-align: start;
 }
 #geografis-kelautan .tab-wrap #tab-kelautan-1 .fact-kelautan li{
-    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: rgba(255,255,255,0.8);
+    line-height: 150%;
+    background: rgba(0,0,0,0.5);
+}
+.fact-kelautan{
+    padding-left: 0;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 20px;
 }
 #geografis-kelautan .tab-wrap #tab-kelautan-2{
     text-align: start;
@@ -1485,30 +1507,63 @@ ul{
     margin-top: 0;
 }
 #tab-kelautan-2 ul{
-    column-count: 1;
     padding-left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 30px;
 }
 #tab-kelautan-2 ul li{
-    width: 50%;
+    width: 100%;
+    float: left;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+#tab-kelautan-2 ul li h4{
+    margin-top: 0;
+    width: 60%;
     float: left;
 }
 #tab-kelautan-2 ul li p{
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(255,255,255,0.6);
+    margin-bottom: 0;
+    width: 40%;
+    float: left;
+}
+#tab-kelautan-3{
+    padding-top: 0;
+}
+#tab-kelautan-3 ul{
+    padding-left: 0;
+    height: 300px;
+    overflow-y: auto;
+    padding-right: 20px;
 }
 #geografis-kelautan .tab-wrap #tab-kelautan-3{
     text-align: start;
-    padding-top: 90px;
 }
 #geografis-kelautan .tab-wrap #tab-kelautan-3 ul li{
     margin-top: 20px;
+    color: rgba(255,255,255,0.8);
+    line-height: 150%;
 }
 #geografis-kelautan .tab-wrap #tab-kelautan-4{
     text-align: start;
     padding-top: 0px;
 }
+#geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan{
+    height: 300px;
+    overflow-y: auto;
+    padding-right: 20px;
+}
 #geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan li{
-    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 150%;
+    color: rgba(255,255,255,0.8);
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.5);
 }
 #geografis-pertambangan{
     text-align: center;
@@ -1525,48 +1580,65 @@ ul{
 #geografis-pertambangan .tab-wrap #tab-pertambangan-1{
     text-align: start;
     padding-top: 0px;
+    padding-left: 0;
 }
 #geografis-pertambangan .tab-wrap #tab-pertambangan-1 li{
-    padding-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 50px;
+    color: rgba(255,255,255,0.8);
+    line-height: 150%;
+}
+#geografis-pertambangan .tab-wrap #tab-pertambangan-1 li::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/check.png) no-repeat center;
 }
 #geografis-pertambangan #tab-pertambangan-2 h4{
     padding-top: 5px;
     display: inline-block;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 #geografis-pertambangan #tab-pertambangan-2 ul li p{
     margin-top: 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
 }
 #geografis-pertambangan #tab-pertambangan-2 ul{
     display: flex;
+    padding-left: 0;
 }
 #geografis-pertambangan #tab-pertambangan-2 ul li{
-    width: 30%;
+    width: 33%;
 }
 #tab-pertambangan-2 ul .pic{
     width: 50px;
     height: 50px;
-    float: left;
+    margin: auto;
     position: relative;
     padding: 5px;;
 }
 #tab-pertambangan-2 ul .pic::before{
     content: "";
-    width: 120%;
-    height: 120%;
+    width: 160%;
+    height: 160%;
     position: absolute;
-    top: -10%;
-    left: -10%;
+    top: 50%;
+    left: 0;
     background: url(../images/circle-1.png);
     background-size: contain;
     opacity: 0.5;
-    margin-left: 50px;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
 }
 #tab-pertambangan-2 ul .pic img{
     width: 100%;
     height: 100%;
     object-fit: contain;
-    margin-left: 50px;
 }
 #geografis-kehutanan{
     text-align: center;
@@ -1584,10 +1656,566 @@ ul{
     text-align: start;
     padding-top: 0px;
 }
-#geografis-kehutanan .tab-wrap #tab-kehutanan-1 ul li{
-    padding-top: 0;
-}
 #geografis-kehutanan .tab-wrap #tab-kehutanan-3 ul li{
     padding-top: 15px;
     text-align: start;
+}
+
+.info-pertanian{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+    height: 240px;
+    background: url(../images/iso-pertanian.webp) no-repeat center;
+    background-size: 32%;
+}
+.pertanian-item{
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: right;
+    position: absolute;
+    right: 60%;
+}
+.pertanian-item:nth-child(1),
+.pertanian-item:nth-child(2),
+.pertanian-item:nth-child(3){
+    right: 70%;
+}
+.pertanian-item:nth-child(4),
+.pertanian-item:nth-child(5){
+    left: 70%;
+    text-align: left;
+}
+.pertanian-item:nth-child(1),
+.pertanian-item:nth-child(4){
+    top: 0;
+}
+.pertanian-item:nth-child(2),
+.pertanian-item:nth-child(5){
+    top: 90px;
+}
+.pertanian-item:nth-child(3){
+    top: 180px;
+}
+#geografis-pertanian .info-pertanian .pertanian-item h4{
+    margin-bottom: 10px;
+    padding-top: 0;
+}
+.accordion{
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+.accordion .item{
+    width: 100%;
+    float: left;
+    margin-bottom: 3px;
+}
+.accordion .item h3{
+    width: 100%;
+    float: left;
+    position: relative;
+    text-align: left;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.5);
+    margin: 0;
+}
+.accordion .item .acc-ct{
+    width: 100%;
+    float: left;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255,255,255,0.1);
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+    padding: 0 20px;
+}
+.accordion .item .acc-ct li{
+    margin-bottom: 2cqb;
+    line-height: 150%;
+    color: rgba(255,255,255,0.8);
+    padding-left: 40px;
+    position: relative;
+}
+.accordion .item .acc-ct li::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    background: url(../images/check.png) no-repeat center;
+}
+.accordion .item.active .acc-ct{
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 20px;
+}
+#tab-kehutanan-1 ul{
+    padding-left: 0;
+    height: 300px;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+#tab-kehutanan-1 ul li{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    line-height: 150%;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+}
+#tab-kehutanan-2{
+    padding-top: 20px;
+}
+#tab-kehutanan-2 .item{
+    width: 24%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+#tab-kehutanan-2 .item h4{
+    padding-top: 0;
+    color: rgba(255,255,255,0.8);
+}
+#tab-kehutanan-2 .item .pic{
+    background: url(../images/circle-1.png) no-repeat center;
+    height: 100px;
+    padding-top: 11%;
+}
+#tab-kehutanan-2 .item .pic img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+#tab-kehutanan-3 ul{
+    width: 100%;
+    float: left;
+    padding-left: 0;
+}
+#tab-kehutanan-3 ul li{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    line-height: 150%;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px){
+    .space-cursor,
+    .space-cursor-2{
+        display: none;
+    }
+    .potensi-box{
+        width: 100%;
+        padding: 30px;
+        height: 100%;
+    }
+    .potensi-box.show{
+        top: 0;
+    }
+    .potensi-title{
+        font-size: 24px;
+    }
+    .potensi-cards{
+        width: 100%;
+    }
+    .potensi-item{
+        width: 300px;
+        height: 100px;
+        margin: 0 0 10px;
+    }
+    .potensi-item .wrap{
+        width: 300px;
+        height: 100px;
+        background-size: cover;
+        max-width: 100%;
+        background: url(../images/bg-card-type-1-mobile.png) no-repeat center;
+        background-size: contain;
+    }
+    .potensi-item .pic{
+        left: 25%;
+        top: 10px;
+    }
+    .potensi-item .pic img{
+        width: 80px;
+        height: 80px;
+    }
+    .potensi-item p{
+        left: 75%;
+        top: 33%;
+        width: 40%;
+    }
+    .detail-box{
+        height: 600px;
+        width: 320px;
+    }
+    .detail-box .close-bt{
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .detail .popup-detail{
+        width: 100%;
+        height: 600px;
+        padding: 0 20px;
+        background: #333;
+    }
+    .popup-detail h3{
+        text-align: left;
+    }
+    .brands{
+        column-count: 2;
+        margin-top: 30px;
+    }
+    .brands-circle{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translate(0,0);
+    }
+    .brands-circle .text{
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translate(0,0);
+        width: 100%;
+    }
+    .brands-circle .text h3{
+        font-size: 16px;
+    }
+    .brands-circle .text a{
+        justify-content: start;
+    }
+    .brands li{
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        transform: translate(0,0);
+        margin-bottom: 20px;
+        padding-top: 0;
+    }
+    .brands li .pic{
+        padding: 0;
+    }
+    .brands li h4{
+        left: 48px !important;
+        text-align: left !important;
+        margin-top: 6px;
+    }
+    .bisnis-ct .column{
+        width: 100%;
+    }
+    .brands-circle::before{
+        display: none;
+    }
+
+    .dialog-box{
+        background: #333;
+        width: 300px;
+        background: url(../images/bg-popup-1-mobile.png) no-repeat center;
+        background-size: contain;
+    }
+    .actor-name{
+        font-size: 16px;
+    }
+    .actor{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        bottom: auto;
+        margin:  40px auto 20px;
+        left: auto !important;
+        right: auto !important;
+    }
+    .actor lottie-player{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .dialog-box .text{
+        position: relative;
+        width: 90%;
+        top: auto;
+        left: 5% !important;
+        height: 100px;
+    }
+    .dialog-box .text p{
+        font-size: 16px;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        margin: 0;
+    }
+    .dialog-box .bt-group{
+        bottom: 20px;
+        width: 100%;
+        left: 0 !important;
+    }
+    .bt{
+        font-size: 13px;
+        padding: 12px 20px;
+    }
+
+    #list-potensi-geografis .potensi-cards{
+        margin-top: 80px;
+    }
+    #list-potensi-geografis .potensi-cards .potensi-item{
+        width: 100%;
+    }
+    #list-potensi-geografis .potensi-cards .potensi-item .pic{
+        top: 20px;
+    }
+    #list-potensi-geografis .potensi-cards .potensi-item .pic img{
+        width: 60px;
+        height: 60px;
+    }
+    .info-pertanian{
+        margin-top: 20px;
+        background: none;
+    }
+    .pertanian-item{
+        position: relative;
+        width: 100%;
+        float: left;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        text-align: left !important;
+    }
+    .popup-detail .back-bt{
+        top: 50px;
+        left: 20px;
+    }
+    #geografis-pertanian h4,
+    #geografis-kelautan h4{
+        text-align: left;
+    }
+    .fact-kelautan{
+        padding-right: 0;
+    }
+    .fact-kelautan li{
+        font-size: 14px;
+    }
+    #geografis-kelautan .tab-wrap #tab-kelautan-2 h4{
+        font-size: 14px;
+        padding-right: 20px;
+    }
+    #geografis-kelautan .tab-wrap #tab-kelautan-2 p{
+        font-size: 14px;
+    }
+    #geografis-kelautan .tab-wrap #tab-kelautan-3 ul li{
+        font-size: 14px;
+    }
+    #geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan li{
+        font-size: 14px;
+    }
+    .tab-nav{
+        float: left;
+        width: 100%;
+        margin-top: 0 !important;
+        padding-left: 0;
+        white-space: nowrap;
+        overflow-x: auto;
+        margin-bottom: 20px;
+    }
+    .tab-nav li{
+        font-size: 12px;
+        width: auto;
+        float: none;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .tab-nav li a{
+        width: 180px;
+        height: 40px;
+        white-space: normal;
+        padding: 10px;
+    }
+    .tab-ct{
+        width: 100%;
+        top: 80px;
+        left: auto;
+        padding: 0;
+    }
+    .tab-ct.show{
+        transform: translateY(0) scale(1);
+    }
+    #tab-pertambangan-1 ul{
+        padding-left: 0;
+        height: 300px;
+        overflow-y: auto;
+    }
+
+    .title-detail h4{
+        margin-top: 20px;
+    }
+    .statistik-umkm{
+        width: 100%;
+        float: left;
+    }
+    .statistik-umkm .box,
+    #umkm p,
+    #ukm-sukses p,
+    .statistik-umkm .box p{
+        width: 100%;
+        float: left;
+        font-size: 14px;
+    }
+    .statistik-umkm .box p{
+        margin: 0 0 10px;
+        text-align: left;
+    }
+    .statistik-umkm .box p img{
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-bottom: 0;
+        margin-right: 20px;
+        margin-top: -10px;
+    }
+    #umkm .box{
+        min-height: 0;
+    }
+    .ukm-berhasil-ekspor .item{
+        padding: 0;
+        display: block;
+        height: 300px;
+        overflow-y: auto;
+    }
+    .ukm-berhasil-ekspor{
+        height: 300px;
+        width: 300px !important;
+        margin-left: calc((100% - 300px) / 2);
+    }
+    .ukm-berhasil-ekspor .item .pic{
+        margin: 0 auto 20px;
+        width: 100px;
+        height: 100px;
+        padding: 5%;
+    }
+    .ukm-berhasil-ekspor .item .text{
+        width: 100%;
+        padding-left: 0;
+    }
+    .popup-detail h3{
+        text-align: left;
+    }
+    .ukm-berhasil-ekspor h3{
+        text-align: center;
+        font-size: 16px;
+    }
+    .ukm-berhasil-ekspor h3::after{
+        left: calc(50% - 30px);
+    }
+
+    #tab-pariwisata-2.tab-ct,
+    #tab-pariwisata-4.tab-ct{
+        height: 360px;
+        overflow-y: auto;
+    }
+    #tab-pariwisata-1 p{
+        font-size: 14px;
+    }
+    #tab-pariwisata-2 .lists li{
+        width: 100%;
+    }
+    #tab-pariwisata-4 .lists li{
+        width: 100%;
+    }
+    .pariwisata-4-slider .item h4{
+        margin-top: 0;
+    }
+    .pariwisata-4-slider .item p{
+        font-size: 14px;
+    }
+    .medali-asian-games .item p{
+        font-size: 14px;
+    }
+    .medali-asian-games .item{
+        padding: 0 10px;
+    }
+    .contingen .column{
+        width: 40%;
+    }
+    .contingen .column .pic{
+        width: 100%;
+        height: auto;
+    }
+    .contingen .column .text h4{
+        font-size: 16px;
+    }
+    .contingen .column .text p{
+        font-size: 14px;
+    }
+    .total-medali-sea-games .item{
+        text-align: center;
+    }
+    #geografis-pertambangan .tab-wrap #tab-pertambangan-1 li{
+        font-size: 14px;
+    }
+    .accordion .item h3{
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    .accordion .item .acc-ct li{
+        font-size: 14px;
+    }
+    .accordion .item.active .acc-ct{
+        max-height: 160px;
+    }
+    #tab-kehutanan-1 ul{
+        padding-right: 0;
+    }
+    #tab-kehutanan-1 ul li{
+        font-size: 14px;
+    }
+    #tab-kehutanan-2{
+        padding-top: 0;
+        height: 320px;
+        overflow-y: scroll;
+    }
+    #tab-kehutanan-2 .item{
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+    }
+    #tab-kehutanan-2 .item .pic{
+        width: 60px;
+        height: 60px;
+        float: left;
+        padding-top: 0;
+        background-size: contain;
+    }
+    #tab-kehutanan-2 .item .pic img{
+        margin-top: 6px;
+    }
+    #tab-kehutanan-2 .item .text{
+        width: calc(100% - 60px);
+        float: left;
+        text-align: left;
+        padding-left: 20px;
+    }
+    #geografis-kehutanan .tab-wrap #tab-kehutanan-3 ul li{
+        font-size: 14px;
+    }
 }

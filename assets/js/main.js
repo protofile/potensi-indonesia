@@ -78,4 +78,10 @@ $(document).ready(function(){
         $(".tab-ct").removeClass("show")
         $($(this).attr("href")).addClass("show");
     });
+
+    /*ACCORDION*/
+    $(".accordion .item h3").click(function(){
+        $(".accordion .item").removeClass("active");
+        $($(this).parent()).addClass("active");
+    });
 }); 
