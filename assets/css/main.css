@@ -1448,7 +1448,6 @@ html,body{
     left: 62px;
     top: 96px;
     background: url(../images/back-bt-bg.png) no-repeat right center;
-    background-size: contain;
     padding: 10px 50px 10px 30px;
 }
 #geografis-pertanian{
@@ -2004,7 +2003,7 @@ html,body{
         top: auto;
         bottom: 0;
         left: 0;
-        padding: 10px 40px 10px 20px;
+        padding: 5px 40px 5px 20px;
     }
     #geografis-pertanian h4,
     #geografis-kelautan h4{
