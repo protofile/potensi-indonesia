@@ -84,4 +84,18 @@ $(document).ready(function(){
         $(".accordion .item").removeClass("active");
         $($(this).parent()).addClass("active");
     });
+
+    /*CLOSING SCENE*/
+    $(".goToClosingScene").click(function(cs){
+        cs.preventDefault();
+        $($(this).attr("href")).addClass("show");
+    });
+    $(".restart-bt").click(function(rb){
+        rb.preventDefault();
+        $($(this).parent().parent().parent()).removeClass("show");
+        $(".prolog").removeClass("scene-closed");
+        $(".prolog").show();
+        $(".prolog .text").show();
+        $(".cockpit").addClass("active");
+    });
 }); 
