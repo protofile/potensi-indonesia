@@ -21,10 +21,6 @@
 </head>
 
 <body style="background: rgba(255, 255, 255, 0);">
-    <div class="detail-preloader closed">
-        <div class="top-door"></div>
-        <div class="bottom-door"></div>
-    </div>
     <div class="detail shrink">
         <div id="olahraga" class="popup-detail show">
             <h3>OLAHRAGA INDONESIA</h3>
@@ -465,24 +461,6 @@
 
     <script>
         $(document).ready(function () {
-            setTimeout(function () {
-                $(".detail-preloader").toggleClass("open closed");
-                setTimeout(function () {
-                    $(".detail").removeClass("shrink");
-                }, 200);
-            }, 5000);
-            /*$("#prolog-text").typewriter({
-                    prefix : "Loading ",
-                    text : [
-                        "1",
-                        "2",
-                        "3",
-                        "BOOM",
-                    ],
-                    typeDelay : 100,
-                    waitingTime : 1500,
-                    blinkSpeed : 800
-                });*/
             $(".medali-asian-games").owlCarousel({
                 items: 3.5,
                 itemsMobile: [768,2],

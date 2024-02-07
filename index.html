@@ -304,18 +304,12 @@
 
         <script>
             $(document).ready(function(){
-                /*$("#prolog-text").typewriter({
-                    prefix : "Loading ",
-                    text : [
-                        "1",
-                        "2",
-                        "3",
-                        "BOOM",
-                    ],
-                    typeDelay : 100,
-                    waitingTime : 1500,
-                    blinkSpeed : 800
-                });*/
+                $("iframe").mousemove(function(f) {
+                    $('.space-cursor').eq(0).css({'opacity': '0'});
+                })
+                $("iframe").mouseleave(function(f) {
+                    $('.space-cursor').eq(0).css({'opacity': '1'});
+                })
             });
         </script>
     </body>

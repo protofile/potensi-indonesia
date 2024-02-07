@@ -124,6 +124,12 @@ html,body{
     50%  {left: 120%; top: 20%;}
     100% {left: -20%; top: 20%;}
 }
+@keyframes detailopen {
+    0%   {width: 0; height: 0;}
+    70%  {width: 100vw; height: 0;}
+    80%  {border-color: #026DE0;}
+    100% {width: 100vw; height: 100vh; border-color: rgba(0,0,0,0);}
+}
 
 /*PROLOG*/
 .prolog{
@@ -562,18 +568,21 @@ html,body{
 
 /* DETAIL PI */
 .detail{
-    width: 100vw;
-    position: fixed;
+    width: 0;
     height: 0;
+    position: fixed;
     overflow: hidden;
     /*background: url(../images/bg-detail-page.webp) no-repeat center;*/
     background-size: cover;
-    transition: all ease-out 0.3s;
-    -moz-transition: all ease-out 0.3s;
-    -webkit-transition: all ease-out 0.3s;
-}
-.detail-preloader.open ~ .detail{
-    height: 100vh;
+    transition: all ease-out 1s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-top: 3px solid #026DE0;
+    border-bottom: 3px solid #026DE0;
+    animation: detailopen 5s;
+    animation-fill-mode: both;
+    background: rgba(0,0,0,0.5);
 }
 .detail .popup-detail{
     background: url(../images/bg-popup-3.webp) no-repeat center;
@@ -827,66 +836,8 @@ html,body{
 
 /* DETAIL PI */
 
-/*DETAIL PRELOADER*/
-.detail-preloader{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
-.detail-preloader div{
-    content: "";
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    background: none;
-    left: 50%;
-    transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transition: all ease-in 0.3s;
-}
-.detail-preloader.open{
-    pointer-events: none;
-}
-.detail-preloader.closed .top-door{
-    top: 0;
-}
-.detail-preloader.closed .bottom-door{
-    top: 50%;
-}
-.detail-preloader.open .top-door{
-    top: -50%;
-}
-.detail-preloader .bottom-door{
-    top: 100%;
-}
-.detail-preloader div::before{
-    content: "";
-    height: 2px;
-    position: absolute;
-    left: 0;
-    background: #026DE0;
-    animation: dtPreloaderLine 5s;
-    animation-fill-mode: both;
-}
-.detail-preloader .top-door::before{
-    bottom: 0;
-}
-.detail-preloader .bottom-door::before{
-    top: 0;
-}
-.shrink{
-    transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-}
-/*DETAIL PRELOADER*/
-
 /*CURSOR*/
-* {
+/** {
     cursor: none;
   }
 .space-cursor{
@@ -911,7 +862,7 @@ html,body{
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-}
+}*/
 /*CURSOR*/
 
 /*DETAIL BOX*/
@@ -939,7 +890,7 @@ html,body{
     opacity: 1;
     pointer-events: auto;
 }
-.detail-box::before{
+/*.detail-box::before{
     content: "";
     width: 100vw;
     height: 100vh;
@@ -958,7 +909,7 @@ html,body{
 }
 .detail-box.show::before{
     opacity: 1;
-}
+}*/
 .detail-box .close-bt{
     width: 50px;
     height: 50px;
