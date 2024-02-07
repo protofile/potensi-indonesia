@@ -78,6 +78,20 @@ $(document).ready(function(){
         $(".tab-ct").removeClass("show")
         $($(this).attr("href")).addClass("show");
     });
+    $(".tab-nav-2 li a").click(function(tla){
+        tla.preventDefault();
+        $(".tab-nav-2 li a").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-ct-2").removeClass("show")
+        $($(this).attr("href")).addClass("show");
+    });
+    $(".tab-nav-3 li a").click(function(tla){
+        tla.preventDefault();
+        $(".tab-nav-3 li a").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-ct-3").removeClass("show")
+        $($(this).attr("href")).addClass("show");
+    });
 
     /*ACCORDION*/
     $(".accordion .item h3").click(function(){
