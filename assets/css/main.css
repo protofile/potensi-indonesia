@@ -1177,7 +1177,7 @@ html,body{
 .tab-nav-3 li a{
     padding: 17px 10px 10px;
     display: block;
-    background: url(../images/tab-bt.png) no-repeat center;
+    background: url(../images/tab-bt.webp) no-repeat center;
     background-size: contain;
     transition: all ease-out 0.3s;
     -moz-transition: all ease-out 0.3s;
@@ -1191,7 +1191,7 @@ html,body{
 .tab-nav-2 li a.active,
 .tab-nav-3 li a:hover,
 .tab-nav-3 li a.active{
-    background: url(../images/tab-bt-hover.png) no-repeat center;
+    background: url(../images/tab-bt-hover.webp) no-repeat center;
     background-size: contain;
 }
 .tab-ct,
@@ -1232,7 +1232,7 @@ html,body{
     width: 100px;
     height: 100px;
     padding: 30px 20px;
-    background: url(../images/circle-1.png) no-repeat center;
+    background: url(../images/circle-1.webp) no-repeat center;
     background-size: contain;
     text-align: center;
     font-size: 24px;
@@ -1360,13 +1360,13 @@ html,body{
     position: absolute;
 }
 .ukm-berhasil-ekspor .item .pic::before{
-    background: url(../images/border-top-left.png) no-repeat center;
+    background: url(../images/border-top-left.webp) no-repeat center;
     background-size: contain;
     top: 0;
     left: 0;
 }
 .ukm-berhasil-ekspor .item .pic::after{
-    background: url(../images/border-bottom-right.png) no-repeat center;
+    background: url(../images/border-bottom-right.webp) no-repeat center;
     background-size: contain;
     bottom: 0;
     right: 0;
@@ -1495,7 +1495,7 @@ html,body{
     position: absolute;
     top: -10%;
     left: -10%;
-    background: url(../images/circle-1.png);
+    background: url(../images/circle-1.webp);
     background-size: contain;
     opacity: 0.5;
 }
@@ -1533,7 +1533,7 @@ html,body{
     position: absolute;
     left: 62px;
     top: 96px;
-    background: url(../images/back-bt-bg.png) no-repeat right center;
+    background: url(../images/back-bt-bg.webp) no-repeat right center;
     padding: 10px 50px 10px 30px;
 }
 #geografis-pertanian{
@@ -1685,7 +1685,7 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
-    background: url(../images/check.png) no-repeat center;
+    background: url(../images/check.webp) no-repeat center;
 }
 #geografis-pertambangan #tab-pertambangan-2 h4{
     padding-top: 5px;
@@ -1718,7 +1718,7 @@ html,body{
     position: absolute;
     top: 50%;
     left: 0;
-    background: url(../images/circle-1.png);
+    background: url(../images/circle-1.webp);
     background-size: contain;
     opacity: 0.5;
     margin-left: 50%;
@@ -1838,7 +1838,7 @@ html,body{
     position: absolute;
     top: -4px;
     left: 0;
-    background: url(../images/check.png) no-repeat center;
+    background: url(../images/check.webp) no-repeat center;
 }
 .accordion .item.active .acc-ct{
     max-height: 200px;
@@ -1874,7 +1874,7 @@ html,body{
     color: rgba(255,255,255,0.8);
 }
 #tab-kehutanan-2 .item .pic{
-    background: url(../images/circle-1.png) no-repeat center;
+    background: url(../images/circle-1.webp) no-repeat center;
     height: 100px;
     padding-top: 11%;
 }
@@ -1928,7 +1928,7 @@ html,body{
     position: fixed;
     top: 0;
     left: 0;
-    background: url(../images/space-bg.jpg) no-repeat center;
+    background: url(../images/space-bg.webp) no-repeat center;
     background-size: cover;
     z-index: 9999;
     opacity: 0;
@@ -1998,7 +1998,7 @@ html,body{
         height: 100px;
         background-size: cover;
         max-width: 100%;
-        background: url(../images/bg-card-type-1-mobile.png) no-repeat center;
+        background: url(../images/bg-card-type-1-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .potensi-item .pic{
@@ -2028,7 +2028,7 @@ html,body{
         width: 100%;
         height: 600px;
         padding: 0 20px;
-        background: url(../images/bg-popup-3-mobile.png) no-repeat center;
+        background: url(../images/bg-popup-3-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .popup-detail h3{
@@ -2087,7 +2087,7 @@ html,body{
     .dialog-box{
         background: #333;
         width: 300px;
-        background: url(../images/bg-popup-1-mobile.png) no-repeat center;
+        background: url(../images/bg-popup-1-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .actor-name{
@@ -2431,7 +2431,7 @@ html,body{
     .tab-nav li a,
     .tab-nav-2 li a,
     .tab-nav-3 li a{
-        background: url(../images/tab-bt-mobile.png) no-repeat center;
+        background: url(../images/tab-bt-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .tab-nav li a:hover,
@@ -2440,7 +2440,7 @@ html,body{
     .tab-nav-2 li a.active,
     .tab-nav-3 li a:hover,
     .tab-nav-3 li a.active{
-        background: url(../images/tab-bt-hover-mobile.png) no-repeat center;
+        background: url(../images/tab-bt-hover-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .bisnis-ct .column{
