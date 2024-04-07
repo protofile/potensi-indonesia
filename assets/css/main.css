@@ -1101,11 +1101,11 @@ html,body{
 /*BISNIS CT*/
 
 /*TAB OLAHRAGA*/
-.tab-wrap{
+.tab-wrap {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 40px;
     position: relative;
-    min-height: 430px;
+    min-height: 400px;
     display: flex;
     align-items: center;
 }
@@ -1228,44 +1228,15 @@ html,body{
     background: url(../images/arrow-right.webp) no-repeat center;
     background-size: 15px;
 }
-
-.contingen{
-    display: flex;
-    width: 100%;
-    float: left;
-    justify-content: space-around;
-}
-.contingen .column{
-    width: 220px;
-}
-.contingen .column .pic{
-    width: 220px;
-    height: 300px;
-    background: #ccc;
-    float: left;
-    margin-bottom: 20px;
-}
-.contingen .column .pic img{
-    width: 100%;
-}
-.contingen .column .text{
-    text-align: center;
-}
-.contingen .column .text h4{
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-.contingen .column p{
-    font-size: 14px;
-    line-height: 150%;
-    margin-bottom: 0;
-}
 .total-medali-sea-games .item .pic img{
     width: 60%;
 }
 /*TAB OLAHRAGA*/
 
 /*TAB PARIWISATA*/
+.content-pariwisata {
+    padding-top: 140px;
+}
 .lists{
     width: 100%;
     float: left;
@@ -1500,15 +1471,6 @@ html,body{
 #geografis-pertanian{
     text-align: center;
 }
-#geografis-pertanian .info-pertanian h4{
-    padding-top: 40px;
-    padding-bottom: 0;
-    margin:0 0;
-}
-#geografis-pertanian .info-pertanian .text{
-    padding-top: 0;
-    font-size: 14px;
-}
 .tab-wrap .tab-content {
     max-height: 300px;
     overflow-y: auto;
@@ -1530,28 +1492,32 @@ html,body{
 .pi-source {
     font-size: 12px;
     color: rgba(255,255,255,0.8);
-    margin-top: 10px;
+    margin-top: 20px;
     display: block;
     text-align: start;
 }
-.tab-wrap .content-item {
+.popup-detail .content-item {
     margin-bottom: 30px;
     text-align: start;
     line-height: 150%;
+    width: 100%;
     color: rgba(255,255,255,0.8);
 }
-.tab-wrap .content-item h3 {
+.popup-detail .content-item:last-child {
+    margin-bottom: 0;
+}
+.popup-detail .content-item h3 {
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 20px 0;
     float: none;
     text-align: center;
 }
-.tab-wrap .content-item p {
+.popup-detail .content-item p {
     margin: 0 0 10px 0;
     color: rgba(255,255,255,0.8);
 }
-.tab-wrap .content-item h5 {
+.popup-detail .content-item h5 {
     font-size: 16px;
     margin: 15px 0 10px 0;
     color: rgba(255,255,255,0.8);
@@ -1630,48 +1596,36 @@ html,body{
     overflow-x: hidden;
     padding-right: 20px;
 }
-
-.info-pertanian{
-    width: 100%;
-    float: left;
-    text-align: center;
-    margin-top: 80px;
+.pertanian-content-list {
     position: relative;
-    height: 240px;
-    background: url(../images/iso-pertanian.webp) no-repeat center;
-    background-size: 32%;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 80%;
+    margin: 40px auto 0 auto;
 }
-.pertanian-item{
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: right;
-    position: absolute;
-    right: 60%;
+.pertanian-content-list ul {
+    padding: 0;
 }
-.pertanian-item:nth-child(1),
-.pertanian-item:nth-child(2),
-.pertanian-item:nth-child(3){
-    right: 70%;
-}
-.pertanian-item:nth-child(4),
-.pertanian-item:nth-child(5){
-    left: 70%;
-    text-align: left;
-}
-.pertanian-item:nth-child(1),
-.pertanian-item:nth-child(4){
-    top: 0;
-}
-.pertanian-item:nth-child(2),
-.pertanian-item:nth-child(5){
-    top: 90px;
-}
-.pertanian-item:nth-child(3){
-    top: 180px;
-}
-#geografis-pertanian .info-pertanian .pertanian-item h4{
+.pertanian-content-list ul li {
     margin-bottom: 10px;
-    padding-top: 0;
+    padding: 10px 20px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    text-align: start;
+    display: flex;
+    align-items: center;
+}
+.pertanian-content-list .list-pertanian li .tl-left {
+    width: 35%;
+}
+.pertanian-content-list .list-pertanian li .tl-right {
+    flex: 1 1 0%;
 }
 .accordion{
     width: 100%;
@@ -2004,18 +1958,16 @@ html,body{
         width: 60px;
         height: 60px;
     }
-    .info-pertanian{
-        margin-top: 20px;
-        background: none;
+    .pertanian-content-list {
+        height: 350px;
+        max-width: 100%;
     }
-    .pertanian-item{
-        position: relative;
+    .pertanian-content-list ul li {
+        display: block;
+    }
+    .pertanian-content-list .list-pertanian li .tl-left {
         width: 100%;
-        float: left;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        text-align: left !important;
+        margin-bottom: 5px;
     }
     .popup-detail .back-bt{
         top: auto;
@@ -2200,19 +2152,6 @@ html,body{
     .medali-asian-games .item{
         padding: 0 10px;
     }
-    .contingen .column{
-        width: 40%;
-    }
-    .contingen .column .pic{
-        width: 100%;
-        height: auto;
-    }
-    .contingen .column .text h4{
-        font-size: 16px;
-    }
-    .contingen .column .text p{
-        font-size: 14px;
-    }
     .total-medali-sea-games .item{
         text-align: center;
     }
@@ -2253,6 +2192,9 @@ html,body{
 
     .popup{
         top: calc(50% - 60px);
+    }
+    .content-pariwisata {
+        padding-top: 50px;
     }
     #pariwisata .tab-wrap{
         margin-top: 20px;
