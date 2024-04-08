@@ -28,6 +28,11 @@ html,body{
     height: 100%;
     overflow: hidden;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 .master{
     width: 100vw;
     height: 100vh;
@@ -679,15 +684,10 @@ html,body{
 }
 
 .frame .text h3{
-    white-space: nowrap;
-    text-overflow: ellipsis;
     font-size:16px;
     text-align: center;
-    overflow: hidden;
     width: 100%;
-    padding-top: 10px;
-    box-sizing: border-box;
-    display: inline-block;
+    margin: 10px 0;
 }
 .frame .text h5{
     font-size:13px;
@@ -1151,7 +1151,7 @@ html,body{
 .tab-ct,
 .tab-ct-2,
 .tab-ct-3{
-    width: 70%;
+    width: 75%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) scale(0.8);
@@ -1176,60 +1176,75 @@ html,body{
     -moz-transform: translateY(-50%) scale(1);
     -webkit-transform: translateY(-50%) scale(1);
 }
-.medali-asian-games .item{
-    width: 100%;
-    float: left;
-    position: relative;
-    padding: 0 20px;
+.item-sport {
+    margin-bottom: 30px;
 }
-.medali-asian-games .item .circle{
-    width: 100px;
-    height: 100px;
-    padding: 30px 20px;
-    background: url(../images/circle-1.webp) no-repeat center;
-    background-size: contain;
-    text-align: center;
-    font-size: 24px;
-    margin: 0 auto 20px;
+.item-sport:last-child {
+    margin-bottom: 0;
 }
-.medali-asian-games .item .circle span{
-    width: 100%;
-    float: left;
-    font-size: 10px;
+.item-sport h3 {
+    margin: 0 0 30px 0;
 }
-.medali-asian-games .item p{
-    margin: 0 0 5px;
+.item-sport h4 {
+    margin: 0 0 10px 0;
+}
+.item-sport p {
+    margin: 0 0 10px 0;
     font-size: 15px;
     width: 100%;
-    float: left;
 }
-.medali-asian-games .item p span{
-    float: right;
-    width: 30px;
+.list-medali {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.medali-asian-games .owl-prev,
-.medali-asian-games .owl-next{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: calc(50% - 20px);
-    overflow: hidden;
-    text-indent: -200px;
+.item-medali {
+    flex: 1 1 0%;
+    padding: 10px;
+    text-align: center;
 }
-.medali-asian-games .owl-prev{
-    right: 100%;
-    margin-right: 5px;
-    background: url(../images/arrow-left.webp) no-repeat center;
-    background-size: 15px;
-}
-.medali-asian-games .owl-next{
-    left: 100%;
-    margin-left: 5px;
-    background: url(../images/arrow-right.webp) no-repeat center;
-    background-size: 15px;
-}
-.total-medali-sea-games .item .pic img{
+.item-medali .pic img{
     width: 60%;
+}
+.item-medali .text h5 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+.item-medali .text h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+.item-medali .text p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+}
+.table-sport {
+    width: 70%;
+}
+.table-sport td {
+    padding: 10px;
+    line-height: 150%;
+    color: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.5);
+    text-align: start;
+}
+.table-sport td:last-child {
+    width: 115px;
+}
+.list-disc {
+    margin: 0 0 20px 0;
+    padding-left: 25px;
+    list-style: disc;
+}
+.list-disc:last-child {
+    margin: 0;
+}
+.list-disc li {
+    padding: 3px 0;
+    line-height: 150%;
+    color: rgba(255,255,255,0.8);
 }
 /*TAB OLAHRAGA*/
 
@@ -1395,6 +1410,9 @@ html,body{
 }
 #tab-pariwisata-1 p{
     line-height: 150%;
+}
+.slide-content {
+    padding: 0 35px;
 }
 #tab-pariwisata-4 .lists{
     column-count: 1;
@@ -1594,7 +1612,6 @@ html,body{
     height: 422px;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 20px;
 }
 .pertanian-content-list {
     position: relative;
@@ -1986,13 +2003,13 @@ html,body{
         margin: 0;
     }
     .tab-wrap .list-icon {
-        height: 300px;
+        height: 270px;
         overflow-y: scroll;
         overflow-x: hidden;
     }
     .tab-wrap #tab-pertambangan-2 .list-icon li,
     .tab-wrap #tab-kehutanan-2 .list-icon li {
-        width: 50%;
+        width: 100%;
         margin: 10px 0;
     }
     .tab-nav,
@@ -2048,7 +2065,7 @@ html,body{
         padding-top: 20px;
     }
     #tab-pertambangan-3 .accordion {
-        height: 300px;
+        height: 270px;
         overflow-y: auto;
         overflow-x: hidden;
     }
@@ -2146,14 +2163,32 @@ html,body{
     .pariwisata-4-slider .item p{
         font-size: 14px;
     }
-    .medali-asian-games .item p{
-        font-size: 14px;
+    .list-medali {
+        display: block;
     }
-    .medali-asian-games .item{
-        padding: 0 10px;
+    .item-medali {
+        flex: unset;
+        width: 100%;
     }
-    .total-medali-sea-games .item{
-        text-align: center;
+    .item-medali .pic img {
+        width: 100px;
+    }
+    .table-sport {
+        width: 100%;
+    }
+    .tab-wrap .tab-content {
+        max-height: 240px;
+    }
+    #geografis-kelautan .tab-wrap .tab-content {
+        max-height: 270px;
+    }
+    #pariwisata .tab-wrap .tab-content {
+        max-height: 360px;
+    }
+    .slide-content {
+        max-height: 360px;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     #geografis-pertambangan .tab-wrap #tab-pertambangan-1 li{
         font-size: 14px;
