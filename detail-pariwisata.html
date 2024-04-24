@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -624,20 +624,44 @@
 
     <script>
         $(document).ready(function () {
-            $(".film-list").owlCarousel({
+            $(".film-list.owl-carousel").owlCarousel({
+                responsiveBaseElement: 'body',
                 items: 3,
-                itemsMobile: [768,1.1],
                 navigation: true,
-                pagination: false,
+                pagination: true,
                 autoPlay: true,
                 stopOnHover: true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        navigation:true,
+                        center: false,
+                    },
+                    1024:{
+                        items:3,
+                        center: false,
+                    }
+                }
             });
-            $(".pariwisata-4-slider").owlCarousel({
+            $(".pariwisata-4-slider.owl-carousel").owlCarousel({
                 items: 1,
                 navigation: true,
                 pagination: false,
                 autoPlay: true,
                 stopOnHover: true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        navigation:true,
+                        center: false,
+                    },
+                    1024:{
+                        items:3,
+                        center: false,
+                    }
+                }
             });
         });
     </script>

@@ -625,6 +625,13 @@ html,body{
     width: 100%;
     float: left;
 }
+.film-button {
+    float: left;
+    width: 100%;
+}
+.film-button .pi-source {
+    margin-top: 0;
+}
 .frame{
     width: 100%;
     float: left;
@@ -1479,7 +1486,7 @@ html,body{
 .popup-detail .back-bt{
     position: absolute;
     left: 62px;
-    top: 96px;
+    top: 94px;
     background: url(../images/back-bt-bg.webp) no-repeat right center;
     padding: 10px 50px 10px 30px;
 }
@@ -1796,10 +1803,131 @@ html,body{
 }
 /*SCROLLBAR*/
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 991.9px) and (min-width: 769px) {
+    .detail .popup-detail {
+        width: 850px;
+        height: calc(100vh - 30px);
+        padding: 35px 60px;
+    }
+    .title-detail h4 {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+    .film-list .owl-prev {
+        left: -20px;
+    }
+    .film-list .owl-next {
+        left: auto;
+        right: -20px;
+    }
+    #film .film-list,
+    #film .film-button {
+        margin-top: -10px;
+    }
+    #artis .btn-group-2 .btn {
+        display: block;
+        margin-top: 12px;
+        height: auto;
+    }
+    .potensi-box {
+        padding: 60px 30px;
+    }
+    .potensi-box,
+    .potensi-cards {
+        width: 100%;
+    }
+    #potensi-box .potensi-item {
+        width: calc(33.33% - 40px);
+    }
+    #list-potensi-geografis .potensi-cards {
+        margin-top: 165px;
+    }
+    .popup-detail > h4 {
+        padding-top: 70px;
+    }
+    .tab-wrap {
+        min-height: 370px;
+    }
+    .tab-wrap .tab-content {
+        max-height: 285px;
+    }
+    .tab-wrap .tab-content_accordion {
+        height: 360px;
+    }
+    .tab-ct, .tab-ct-2, .tab-ct-3 {
+        width: 72%;
+    }
+    .tab-nav, .tab-nav-2, .tab-nav-3 {
+        width: calc(100% - 72%);
+        padding-left: 5px;
+    }
+    .tab-nav li a, .tab-nav-2 li a, .tab-nav-3 li a {
+        width: 200px;
+    }
+    .pertanian-content-list {
+        height: 310px;
+    }
+    .popup-detail .back-bt {
+        left: 48px;
+        top: 109px;
+    }
+    #umkm .box {
+        min-height: 370px;
+    }
+    .content-pariwisata {
+        padding-top: 100px;
+    }
+    #tab-pariwisata-4 .lists .pic::before {
+        top: -5%;
+    }
+    #tab-pariwisata-4 .lists li .text {
+        height: 58px;
+        display: flex;
+        align-items: center;
+    }
+    .brands-circle::before {
+        width: 795px;
+    }
+    .brands li:nth-child(9) {
+        left: -29%;
+    }
+    .brands li:nth-child(8) {
+        left: -21%;
+    }
+    .brands li:nth-child(6) {
+        top: 103%;
+        left: 25%;
+    }
+    .brands li:nth-child(2) {
+        left: 110%;
+    }
+    .brands li:nth-child(1) {
+        left: 107%;
+    }
+    .brands li:nth-child(3) {
+        left: 120%;
+    }
+    .brands li:nth-child(4) {
+        top: 72%;
+        left: 125%;
+    }
+    .brands li:nth-child(5) {
+        top: 95%;
+        left: 124%;
+    }
+    .tab-pariwisata-3 .slide-content{
+        max-height: 100%;
+        overflow-y: hidden;
+    }
+}
+
+@media only screen and (max-width: 768.9px){
     .space-cursor,
     .space-cursor-2{
         display: none;
+    }
+    .popup-detail > h4 {
+        padding-top: 60px;
     }
     .potensi-box{
         width: 100%;
@@ -1861,6 +1989,7 @@ html,body{
     }
     .popup-detail h3{
         text-align: left;
+        margin-bottom: 20px;
     }
     .brands{
         column-count: 2;
@@ -1976,7 +2105,7 @@ html,body{
         height: 60px;
     }
     .pertanian-content-list {
-        height: 350px;
+        height: 370px;
         max-width: 100%;
     }
     .pertanian-content-list ul li {
@@ -2065,7 +2194,7 @@ html,body{
         padding-top: 20px;
     }
     #tab-pertambangan-3 .accordion {
-        height: 270px;
+        height: 300px;
         overflow-y: auto;
         overflow-x: hidden;
     }
@@ -2145,7 +2274,7 @@ html,body{
     #tab-pariwisata-4.tab-ct-3,
     #tab-pariwisata-2.tab-ct-2,
     #tab-pariwisata-4.tab-ct-3{
-        height: 360px;
+        height: 410px;
         overflow-y: auto;
     }
     #tab-pariwisata-1 p{
@@ -2176,14 +2305,15 @@ html,body{
     .table-sport {
         width: 100%;
     }
-    .tab-wrap .tab-content {
-        max-height: 240px;
-    }
+    .tab-wrap .tab-content,
     #geografis-kelautan .tab-wrap .tab-content {
+        max-height: 300px;
+    }
+    #olahraga .tab-wrap .tab-content {
         max-height: 270px;
     }
     #pariwisata .tab-wrap .tab-content {
-        max-height: 360px;
+        max-height: 350px;
     }
     .slide-content {
         max-height: 360px;
