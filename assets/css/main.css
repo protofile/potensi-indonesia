@@ -125,10 +125,10 @@ html,body{
     100% {left: -20%; top: 20%;}
 }
 @keyframes detailopen {
-    0%   {width: 0; height: 0;}
-    70%  {width: 100vw; height: 0;}
+    0%   {opacity: 0; height: 0;}
+    70%  {opacity: 1; height: 0;}
     80%  {border-color: #026DE0;}
-    100% {width: 100vw; height: 100vh; border-color: rgba(0,0,0,0);}
+    100% {opacity: 1; height: 100vh; border-color: rgba(0,0,0,0);}
 }
 
 /*PROLOG*/
@@ -568,7 +568,7 @@ html,body{
 
 /* DETAIL PI */
 .detail{
-    width: 0;
+    width: 100vw;
     height: 0;
     position: fixed;
     overflow: hidden;
@@ -1135,6 +1135,7 @@ html,body{
     -webkit-transition: all ease-out 0.3s;
     width: 207px;
     height: 60px;
+    white-space: normal;
 }
 .tab-nav li a:hover,
 .tab-nav li a.active,
@@ -1923,6 +1924,7 @@ html,body{
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -1939,6 +1941,7 @@ html,body{
     background: rgba(7,164,243,1); 
 }
 /*SCROLLBAR*/
+
 
 @media only screen and (max-width: 768px){
     .space-cursor,
@@ -1985,6 +1988,9 @@ html,body{
         left: 75%;
         top: 33%;
         width: 40%;
+    }
+    .detail{
+        background: none;
     }
     .detail-box{
         height: 600px;
@@ -2165,6 +2171,9 @@ html,body{
     #geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan li{
         font-size: 14px;
     }
+    #geografis-kehutanan h4{
+        padding-top: 40px;
+    }
     .tab-nav,
     .tab-nav-2,
     .tab-nav-3{
@@ -2184,6 +2193,7 @@ html,body{
         float: none;
         display: inline-block;
         margin-right: 10px;
+        margin-bottom: 0;
     }
     .tab-nav li a,
     .tab-nav-2 li a,
@@ -2200,6 +2210,7 @@ html,body{
         top: 80px;
         left: auto;
         padding: 0;
+        margin-top: 20px;
     }
     .tab-ct.show,
     .tab-ct-2.show,
