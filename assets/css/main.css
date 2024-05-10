@@ -1118,7 +1118,8 @@ html,body{
 }
 .tab-nav,
 .tab-nav-2,
-.tab-nav-3{
+.tab-nav-3,
+.tab-nav-4{
     width: 30%;
     display: inline-flex;
     flex-direction: column;
@@ -1126,7 +1127,8 @@ html,body{
 }
 .tab-nav li,
 .tab-nav-2 li,
-.tab-nav-3 li{
+.tab-nav-3 li,
+.tab-nav-4 li{
     width: 100%;
     float: left;
     margin-bottom: 10px;
@@ -1135,7 +1137,8 @@ html,body{
 }
 .tab-nav li a,
 .tab-nav-2 li a,
-.tab-nav-3 li a{
+.tab-nav-3 li a,
+.tab-nav-4 li a{
     padding: 17px 10px 10px;
     display: block;
     background: url(../images/tab-bt.webp) no-repeat center;
@@ -1152,13 +1155,16 @@ html,body{
 .tab-nav-2 li a:hover,
 .tab-nav-2 li a.active,
 .tab-nav-3 li a:hover,
-.tab-nav-3 li a.active{
+.tab-nav-3 li a.active,
+.tab-nav-4 li a:hover,
+.tab-nav-4 li a.active{
     background: url(../images/tab-bt-hover.webp) no-repeat center;
     background-size: contain;
 }
 .tab-ct,
 .tab-ct-2,
-.tab-ct-3{
+.tab-ct-3,
+.tab-ct-4{
     width: 75%;
     position: absolute;
     top: 50%;
@@ -1177,7 +1183,9 @@ html,body{
 .tab-ct-2.show,
 .tab-ct-2.default-show,
 .tab-ct-3.show,
-.tab-ct-3.default-show{
+.tab-ct-3.default-show,
+.tab-ct-4.show,
+.tab-ct-4.default-show{
     opacity: 1;
     pointer-events: auto;
     transform: translateY(-50%) scale(1);
@@ -1192,14 +1200,20 @@ html,body{
 }
 .item-sport h3 {
     margin: 0 0 30px 0;
+    text-align: center;
 }
 .item-sport h4 {
     margin: 0 0 10px 0;
+    text-align: center;
 }
 .item-sport p {
     margin: 0 0 10px 0;
     font-size: 15px;
     width: 100%;
+    text-align: center;
+}
+.item-sport table{
+    margin: auto;
 }
 .list-medali {
     width: 100%;
@@ -1856,14 +1870,14 @@ html,body{
     .tab-wrap .tab-content_accordion {
         height: 360px;
     }
-    .tab-ct, .tab-ct-2, .tab-ct-3 {
+    .tab-ct, .tab-ct-2, .tab-ct-3, .tab-ct-4 {
         width: 72%;
     }
-    .tab-nav, .tab-nav-2, .tab-nav-3 {
+    .tab-nav, .tab-nav-2, .tab-nav-3, .tab-nav-4 {
         width: calc(100% - 72%);
         padding-left: 5px;
     }
-    .tab-nav li a, .tab-nav-2 li a, .tab-nav-3 li a {
+    .tab-nav li a, .tab-nav-2 li a, .tab-nav-3 li a, .tab-nav-4 li a {
         width: 200px;
     }
     .pertanian-content-list {
@@ -2151,7 +2165,8 @@ html,body{
     }
     .tab-nav,
     .tab-nav-2,
-    .tab-nav-3{
+    .tab-nav-3,
+    .tab-nav-4{
         float: left;
         width: 100%;
         margin-top: 0 !important;
@@ -2165,7 +2180,8 @@ html,body{
     }
     .tab-nav li,
     .tab-nav-2 li,
-    .tab-nav-3 li{
+    .tab-nav-3 li,
+    .tab-nav-4 li{
         font-size: 12px;
         width: auto;
         float: none;
@@ -2175,7 +2191,8 @@ html,body{
     }
     .tab-nav li a,
     .tab-nav-2 li a,
-    .tab-nav-2 li a{
+    .tab-nav-3 li a,
+    .tab-nav-4 li a{
         width: 180px;
         height: 40px;
         white-space: normal;
@@ -2183,7 +2200,8 @@ html,body{
     }
     .tab-ct,
     .tab-ct-2,
-    .tab-ct-3{
+    .tab-ct-3,
+    .tab-ct-4{
         width: 100%;
         top: 80px;
         left: auto;
@@ -2192,7 +2210,8 @@ html,body{
     }
     .tab-ct.show,
     .tab-ct-2.show,
-    .tab-ct-3.show{
+    .tab-ct-3.show,
+    .tab-ct-4.show{
         transform: translateY(5%) scale(1);
     }
     #tab-pertambangan-1 ul{
@@ -2394,7 +2413,8 @@ html,body{
     }
     .tab-nav li a,
     .tab-nav-2 li a,
-    .tab-nav-3 li a{
+    .tab-nav-3 li a,
+    .tab-nav-4 li a{
         background: url(../images/tab-bt-mobile.webp) no-repeat center;
         background-size: contain;
         text-wrap: wrap;
@@ -2404,7 +2424,9 @@ html,body{
     .tab-nav-2 li a:hover,
     .tab-nav-2 li a.active,
     .tab-nav-3 li a:hover,
-    .tab-nav-3 li a.active{
+    .tab-nav-3 li a.active,
+    .tab-nav-4 li a:hover,
+    .tab-nav-4 li a.active{
         background: url(../images/tab-bt-hover-mobile.webp) no-repeat center;
         background-size: contain;
     }

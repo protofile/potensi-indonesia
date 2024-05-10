@@ -100,6 +100,13 @@ $(document).ready(function(){
         $(".tab-ct-3").removeClass("show")
         $($(this).attr("href")).addClass("show");
     });
+    $(".tab-nav-4 li a").click(function(tlaf){
+        tlaf.preventDefault();
+        $(".tab-nav-4 li a").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-ct-4").removeClass("show")
+        $($(this).attr("href")).addClass("show");
+    });
 
     /*ACCORDION*/
     $(".accordion .item h3").click(function(){
