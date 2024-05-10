@@ -28,6 +28,11 @@ html,body{
     height: 100%;
     overflow: hidden;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 .master{
     width: 100vw;
     height: 100vh;
@@ -620,6 +625,13 @@ html,body{
     width: 100%;
     float: left;
 }
+.film-button {
+    float: left;
+    width: 100%;
+}
+.film-button .pi-source {
+    margin-top: 0;
+}
 .frame{
     width: 100%;
     float: left;
@@ -679,15 +691,10 @@ html,body{
 }
 
 .frame .text h3{
-    white-space: nowrap;
-    text-overflow: ellipsis;
     font-size:16px;
     text-align: center;
-    overflow: hidden;
     width: 100%;
-    padding-top: 10px;
-    box-sizing: border-box;
-    display: inline-block;
+    margin: 10px 0;
 }
 .frame .text h5{
     font-size:13px;
@@ -1101,18 +1108,21 @@ html,body{
 /*BISNIS CT*/
 
 /*TAB OLAHRAGA*/
-.tab-wrap{
+.tab-wrap {
     width: 100%;
-    float: left;
-    margin-top: 80px;
+    margin-top: 40px;
     position: relative;
-    min-height: 430px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
 }
 .tab-nav,
 .tab-nav-2,
 .tab-nav-3{
     width: 30%;
-    float: right;
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: auto;
 }
 .tab-nav li,
 .tab-nav-2 li,
@@ -1128,7 +1138,7 @@ html,body{
 .tab-nav-3 li a{
     padding: 17px 10px 10px;
     display: block;
-    background: url(../images/tab-bt.png) no-repeat center;
+    background: url(../images/tab-bt.webp) no-repeat center;
     background-size: contain;
     transition: all ease-out 0.3s;
     -moz-transition: all ease-out 0.3s;
@@ -1143,13 +1153,13 @@ html,body{
 .tab-nav-2 li a.active,
 .tab-nav-3 li a:hover,
 .tab-nav-3 li a.active{
-    background: url(../images/tab-bt-hover.png) no-repeat center;
+    background: url(../images/tab-bt-hover.webp) no-repeat center;
     background-size: contain;
 }
 .tab-ct,
 .tab-ct-2,
 .tab-ct-3{
-    width: 70%;
+    width: 75%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) scale(0.8);
@@ -1174,96 +1184,82 @@ html,body{
     -moz-transform: translateY(-50%) scale(1);
     -webkit-transform: translateY(-50%) scale(1);
 }
-.medali-asian-games .item{
-    width: 100%;
-    float: left;
-    position: relative;
-    padding: 0 20px;
+.item-sport {
+    margin-bottom: 30px;
 }
-.medali-asian-games .item .circle{
-    width: 100px;
-    height: 100px;
-    padding: 30px 20px;
-    background: url(../images/circle-1.png) no-repeat center;
-    background-size: contain;
-    text-align: center;
-    font-size: 24px;
-    margin: 0 auto 20px;
-}
-.medali-asian-games .item .circle span{
-    width: 100%;
-    float: left;
-    font-size: 10px;
-}
-.medali-asian-games .item p{
-    margin: 0 0 5px;
-    font-size: 15px;
-    width: 100%;
-    float: left;
-}
-.medali-asian-games .item p span{
-    float: right;
-    width: 30px;
-}
-.medali-asian-games .owl-prev,
-.medali-asian-games .owl-next{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: calc(50% - 20px);
-    overflow: hidden;
-    text-indent: -200px;
-}
-.medali-asian-games .owl-prev{
-    right: 100%;
-    margin-right: 5px;
-    background: url(../images/arrow-left.webp) no-repeat center;
-    background-size: 15px;
-}
-.medali-asian-games .owl-next{
-    left: 100%;
-    margin-left: 5px;
-    background: url(../images/arrow-right.webp) no-repeat center;
-    background-size: 15px;
-}
-
-.contingen{
-    display: flex;
-    width: 100%;
-    float: left;
-    justify-content: space-around;
-}
-.contingen .column{
-    width: 220px;
-}
-.contingen .column .pic{
-    width: 220px;
-    height: 300px;
-    background: #ccc;
-    float: left;
-    margin-bottom: 20px;
-}
-.contingen .column .pic img{
-    width: 100%;
-}
-.contingen .column .text{
-    text-align: center;
-}
-.contingen .column .text h4{
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-.contingen .column p{
-    font-size: 14px;
-    line-height: 150%;
+.item-sport:last-child {
     margin-bottom: 0;
 }
-.total-medali-sea-games .item .pic img{
+.item-sport h3 {
+    margin: 0 0 30px 0;
+}
+.item-sport h4 {
+    margin: 0 0 10px 0;
+}
+.item-sport p {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    width: 100%;
+}
+.list-medali {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.item-medali {
+    flex: 1 1 0%;
+    padding: 10px;
+    text-align: center;
+}
+.item-medali .pic img{
     width: 60%;
+}
+.item-medali .text h5 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+.item-medali .text h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+.item-medali .text p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+}
+.table-sport {
+    width: 70%;
+}
+.table-sport td {
+    padding: 10px;
+    line-height: 150%;
+    color: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.5);
+    text-align: start;
+}
+.table-sport td:last-child {
+    width: 115px;
+}
+.list-disc {
+    margin: 0 0 20px 0;
+    padding-left: 25px;
+    list-style: disc;
+}
+.list-disc:last-child {
+    margin: 0;
+}
+.list-disc li {
+    padding: 3px 0;
+    line-height: 150%;
+    color: rgba(255,255,255,0.8);
 }
 /*TAB OLAHRAGA*/
 
 /*TAB PARIWISATA*/
+.content-pariwisata {
+    padding-top: 140px;
+}
 .lists{
     width: 100%;
     float: left;
@@ -1312,13 +1308,13 @@ html,body{
     position: absolute;
 }
 .ukm-berhasil-ekspor .item .pic::before{
-    background: url(../images/border-top-left.png) no-repeat center;
+    background: url(../images/border-top-left.webp) no-repeat center;
     background-size: contain;
     top: 0;
     left: 0;
 }
 .ukm-berhasil-ekspor .item .pic::after{
-    background: url(../images/border-bottom-right.png) no-repeat center;
+    background: url(../images/border-bottom-right.webp) no-repeat center;
     background-size: contain;
     bottom: 0;
     right: 0;
@@ -1423,6 +1419,9 @@ html,body{
 #tab-pariwisata-1 p{
     line-height: 150%;
 }
+.slide-content {
+    padding: 0 35px;
+}
 #tab-pariwisata-4 .lists{
     column-count: 1;
     padding-left: 0;
@@ -1447,7 +1446,7 @@ html,body{
     position: absolute;
     top: -10%;
     left: -10%;
-    background: url(../images/circle-1.png);
+    background: url(../images/circle-1.webp);
     background-size: contain;
     opacity: 0.5;
 }
@@ -1481,270 +1480,177 @@ html,body{
     width: 100%;
     margin-top: 220px;
 }
+.popup-detail > h4 {
+    padding-top: 90px;
+    text-align: center;
+}
 .popup-detail .back-bt{
     position: absolute;
     left: 62px;
-    top: 96px;
-    background: url(../images/back-bt-bg.png) no-repeat right center;
+    top: 94px;
+    background: url(../images/back-bt-bg.webp) no-repeat right center;
     padding: 10px 50px 10px 30px;
+}
+.popup-detail .tab-wrap {
+    margin: 0;
 }
 #geografis-pertanian{
     text-align: center;
 }
-#geografis-pertanian h4{
-    padding-top: 90px;
-}
-#geografis-pertanian .info-pertanian h4{
-    padding-top: 40px;
-    padding-bottom: 0;
-    margin:0 0;
-}
-#geografis-pertanian .info-pertanian .text{
-    padding-top: 0;
-    font-size: 14px;
-}
-#geografis-kelautan{
-    text-align: center;
-}
-#geografis-kelautan h4{
-    padding-top: 90px;
-}
-#geografis-kelautan .tab-wrap{
-    margin-top: 0;
-}
-#geografis-kelautan .tab-wrap .tab-nav,
-#geografis-kelautan .tab-wrap .tab-nav-2,
-#geografis-kelautan .tab-wrap .tab-nav-3{
-    margin-top: 60px;
-}
-#geografis-kelautan .tab-wrap #tab-kelautan-1{
-    text-align: start;
-}
-#geografis-kelautan .tab-wrap #tab-kelautan-1 .fact-kelautan li{
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    color: rgba(255,255,255,0.8);
-    line-height: 150%;
-    background: rgba(0,0,0,0.5);
-}
-.fact-kelautan{
-    padding-left: 0;
-    height: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-right: 20px;
-}
-#geografis-kelautan .tab-wrap #tab-kelautan-2{
-    text-align: start;
-    padding-top: 10px;
-}
-#geografis-kelautan .tab-wrap #tab-kelautan-2 h4{
-    padding-top: 0;
-    margin-bottom: 0;
-}
-#geografis-kelautan .tab-wrap #tab-kelautan-2 p{
-    margin-top: 0;
-}
-#tab-kelautan-2 ul{
-    padding-left: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+.tab-wrap .tab-content {
     max-height: 300px;
-    margin-bottom: 30px;
-}
-#tab-kelautan-2 ul li{
-    width: 100%;
-    float: left;
-    padding: 10px 20px;
-    background: rgba(0,0,0,0.5);
-    margin-bottom: 10px;
-}
-#tab-kelautan-2 ul li h4{
-    margin-top: 0;
-    width: 60%;
-    float: left;
-}
-#tab-kelautan-2 ul li p{
-    font-size: 16px;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 0;
-    width: 40%;
-    float: left;
-}
-#tab-kelautan-3{
-    padding-top: 0;
-}
-#tab-kelautan-3 ul{
-    padding-left: 0;
-    height: 300px;
     overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 20px;
 }
-#geografis-kelautan .tab-wrap #tab-kelautan-3{
+.tab-content ul {
+    margin: 0;
+    padding: 0;
+}
+.tab-wrap .list-block li {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    line-height: 150%;
+    color: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.5);
     text-align: start;
 }
-#geografis-kelautan .tab-wrap #tab-kelautan-3 ul li{
+.pi-source {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
     margin-top: 20px;
-    color: rgba(255,255,255,0.8);
-    line-height: 150%;
-}
-#geografis-kelautan .tab-wrap #tab-kelautan-4{
+    display: block;
     text-align: start;
-    padding-top: 0px;
 }
-#geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan{
-    height: 300px;
-    overflow-y: auto;
-    padding-right: 20px;
-}
-#geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan li{
-    margin-bottom: 10px;
+.popup-detail .content-item {
+    margin-bottom: 30px;
+    text-align: start;
     line-height: 150%;
+    width: 100%;
     color: rgba(255,255,255,0.8);
-    padding: 10px 20px;
-    background: rgba(0,0,0,0.5);
 }
-#geografis-pertambangan{
+.popup-detail .content-item:last-child {
+    margin-bottom: 0;
+}
+.popup-detail .content-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    float: none;
     text-align: center;
 }
-#geografis-pertambangan h4{
-    padding-top: 90px;
+.popup-detail .content-item p {
+    margin: 0 0 10px 0;
+    color: rgba(255,255,255,0.8);
 }
-#geografis-pertambangan .tab-wrap{
-    margin-top: 0;
+.popup-detail .content-item h5 {
+    font-size: 16px;
+    margin: 15px 0 10px 0;
+    color: rgba(255,255,255,0.8);
 }
-#geografis-pertambangan .tab-wrap .tab-nav,
-#geografis-pertambangan .tab-wrap .tab-nav-2,
-#geografis-pertambangan .tab-wrap .tab-nav-3{
-    margin-top: 90px;
-}
-#geografis-pertambangan .tab-wrap #tab-pertambangan-1{
-    text-align: start;
-    padding-top: 0px;
-    padding-left: 0;
-}
-#geografis-pertambangan .tab-wrap #tab-pertambangan-1 li{
+.tab-wrap .list-check li{
     margin-bottom: 20px;
     position: relative;
     padding-left: 50px;
     color: rgba(255,255,255,0.8);
     line-height: 150%;
 }
-#geografis-pertambangan .tab-wrap #tab-pertambangan-1 li::before{
+.tab-wrap .list-check li::before{
     content: "";
     width: 30px;
     height: 30px;
     position: absolute;
     top: 0;
     left: 0;
-    background: url(../images/check.png) no-repeat center;
+    background: url(../images/check.webp) no-repeat center;
 }
-#geografis-pertambangan #tab-pertambangan-2 h4{
+.tab-wrap .list-icon {
+    padding-left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tab-wrap #tab-pertambangan-2 .list-icon li {
+    width: 33%;
+}
+.tab-wrap #tab-kehutanan-2 .list-icon li {
+    width: 25%;
+    margin: 10px 0;
+}
+.tab-wrap .list-icon h4{
     padding-top: 5px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
 }
-#geografis-pertambangan #tab-pertambangan-2 ul li p{
+.tab-wrap .list-icon p{
     margin-top: 0;
     color: rgba(255,255,255,0.8);
     font-size: 14px;
 }
-#geografis-pertambangan #tab-pertambangan-2 ul{
-    display: flex;
-    padding-left: 0;
-}
-#geografis-pertambangan #tab-pertambangan-2 ul li{
-    width: 33%;
-}
-#tab-pertambangan-2 ul .pic{
+.tab-wrap #tab-pertambangan-2 .list-icon li .pic{
     width: 50px;
     height: 50px;
     margin: auto;
     position: relative;
-    padding: 5px;;
+    padding: 5px;
+    margin-bottom: 20px;
 }
-#tab-pertambangan-2 ul .pic::before{
+.tab-wrap #tab-pertambangan-2 .list-icon li .pic::before{
     content: "";
     width: 160%;
     height: 160%;
     position: absolute;
     top: 50%;
     left: 0;
-    background: url(../images/circle-1.png);
+    background: url(../images/circle-1.webp);
     background-size: contain;
     opacity: 0.5;
     margin-left: 50%;
     transform: translate(-50%,-50%);
 }
-#tab-pertambangan-2 ul .pic img{
+.tab-wrap #tab-pertambangan-2 .list-icon li .pic img{
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-#geografis-kehutanan{
-    text-align: center;
+.tab-wrap .tab-content_accordion {
+    height: 422px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
-#geografis-kehutanan h4{
-    padding-top: 90px;
-}
-#geografis-kehutanan .tab-wrap{
-    margin-top: 0;
-}
-#geografis-kehutanan .tab-wrap .tab-nav,
-#geografis-kehutanan .tab-wrap .tab-nav-2,
-#geografis-kehutanan .tab-wrap .tab-nav-3{
-    margin-top: 90px;
-}
-#geografis-kehutanan .tab-wrap #tab-kehutanan-1{
-    text-align: start;
-    padding-top: 0px;
-}
-#geografis-kehutanan .tab-wrap #tab-kehutanan-3 ul li{
-    padding-top: 15px;
-    text-align: start;
-}
-
-.info-pertanian{
-    width: 100%;
-    float: left;
-    text-align: center;
-    margin-top: 80px;
+.pertanian-content-list {
     position: relative;
-    height: 240px;
-    background: url(../images/iso-pertanian.webp) no-repeat center;
-    background-size: 32%;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 80%;
+    margin: 40px auto 0 auto;
 }
-.pertanian-item{
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: right;
-    position: absolute;
-    right: 60%;
+.pertanian-content-list ul {
+    padding: 0;
 }
-.pertanian-item:nth-child(1),
-.pertanian-item:nth-child(2),
-.pertanian-item:nth-child(3){
-    right: 70%;
-}
-.pertanian-item:nth-child(4),
-.pertanian-item:nth-child(5){
-    left: 70%;
-    text-align: left;
-}
-.pertanian-item:nth-child(1),
-.pertanian-item:nth-child(4){
-    top: 0;
-}
-.pertanian-item:nth-child(2),
-.pertanian-item:nth-child(5){
-    top: 90px;
-}
-.pertanian-item:nth-child(3){
-    top: 180px;
-}
-#geografis-pertanian .info-pertanian .pertanian-item h4{
+.pertanian-content-list ul li {
     margin-bottom: 10px;
-    padding-top: 0;
+    padding: 10px 20px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    text-align: start;
+    display: flex;
+    align-items: center;
+}
+.pertanian-content-list .list-pertanian li .tl-left {
+    width: 35%;
+}
+.pertanian-content-list .list-pertanian li .tl-right {
+    flex: 1 1 0%;
 }
 .accordion{
     width: 100%;
@@ -1790,65 +1696,22 @@ html,body{
     position: absolute;
     top: -4px;
     left: 0;
-    background: url(../images/check.png) no-repeat center;
+    background: url(../images/check.webp) no-repeat center;
 }
 .accordion .item.active .acc-ct{
     max-height: 200px;
     overflow-y: auto;
     padding: 20px;
 }
-#tab-kehutanan-1 ul{
-    padding-left: 0;
-    height: 300px;
-    overflow-y: auto;
-    padding-right: 20px;
-}
-#tab-kehutanan-1 ul li{
-    width: 100%;
-    float: left;
-    margin-bottom: 10px;
-    line-height: 150%;
-    background: rgba(0,0,0,0.5);
-    padding: 10px 20px;
-    color: rgba(255,255,255,0.8);
-    font-size: 16px;
-}
-#tab-kehutanan-2{
-    padding-top: 20px;
-}
-#tab-kehutanan-2 .item{
-    width: 24%;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-#tab-kehutanan-2 .item h4{
-    padding-top: 0;
-    color: rgba(255,255,255,0.8);
-}
-#tab-kehutanan-2 .item .pic{
-    background: url(../images/circle-1.png) no-repeat center;
+.tab-wrap #tab-kehutanan-2 .list-icon li .pic{
+    background: url(../images/circle-1.webp) no-repeat center;
     height: 100px;
     padding-top: 11%;
 }
-#tab-kehutanan-2 .item .pic img{
+.tab-wrap #tab-kehutanan-2 .list-icon li .pic img{
     width: 80%;
     height: 80%;
     object-fit: contain;
-}
-#tab-kehutanan-3 ul{
-    width: 100%;
-    float: left;
-    padding-left: 0;
-}
-#tab-kehutanan-3 ul li{
-    width: 100%;
-    float: left;
-    margin-bottom: 10px;
-    line-height: 150%;
-    background: rgba(0,0,0,0.5);
-    padding: 10px 20px;
-    color: rgba(255,255,255,0.8);
-    font-size: 16px;
 }
 
 .atlet-asian-games-berprestasi .item{
@@ -1880,7 +1743,7 @@ html,body{
     position: fixed;
     top: 0;
     left: 0;
-    background: url(../images/space-bg.jpg) no-repeat center;
+    background: url(../images/space-bg.webp) no-repeat center;
     background-size: cover;
     z-index: 9999;
     opacity: 0;
@@ -1942,11 +1805,131 @@ html,body{
 }
 /*SCROLLBAR*/
 
+@media only screen and (max-width: 991.9px) and (min-width: 769px) {
+    .detail .popup-detail {
+        width: 850px;
+        height: calc(100vh - 30px);
+        padding: 35px 60px;
+    }
+    .title-detail h4 {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+    .film-list .owl-prev {
+        left: -20px;
+    }
+    .film-list .owl-next {
+        left: auto;
+        right: -20px;
+    }
+    #film .film-list,
+    #film .film-button {
+        margin-top: -10px;
+    }
+    #artis .btn-group-2 .btn {
+        display: block;
+        margin-top: 12px;
+        height: auto;
+    }
+    .potensi-box {
+        padding: 60px 30px;
+    }
+    .potensi-box,
+    .potensi-cards {
+        width: 100%;
+    }
+    #potensi-box .potensi-item {
+        width: calc(33.33% - 40px);
+    }
+    #list-potensi-geografis .potensi-cards {
+        margin-top: 165px;
+    }
+    .popup-detail > h4 {
+        padding-top: 70px;
+    }
+    .tab-wrap {
+        min-height: 370px;
+    }
+    .tab-wrap .tab-content {
+        max-height: 285px;
+    }
+    .tab-wrap .tab-content_accordion {
+        height: 360px;
+    }
+    .tab-ct, .tab-ct-2, .tab-ct-3 {
+        width: 72%;
+    }
+    .tab-nav, .tab-nav-2, .tab-nav-3 {
+        width: calc(100% - 72%);
+        padding-left: 5px;
+    }
+    .tab-nav li a, .tab-nav-2 li a, .tab-nav-3 li a {
+        width: 200px;
+    }
+    .pertanian-content-list {
+        height: 310px;
+    }
+    .popup-detail .back-bt {
+        left: 48px;
+        top: 109px;
+    }
+    #umkm .box {
+        min-height: 370px;
+    }
+    .content-pariwisata {
+        padding-top: 100px;
+    }
+    #tab-pariwisata-4 .lists .pic::before {
+        top: -5%;
+    }
+    #tab-pariwisata-4 .lists li .text {
+        height: 58px;
+        display: flex;
+        align-items: center;
+    }
+    .brands-circle::before {
+        width: 795px;
+    }
+    .brands li:nth-child(9) {
+        left: -29%;
+    }
+    .brands li:nth-child(8) {
+        left: -21%;
+    }
+    .brands li:nth-child(6) {
+        top: 103%;
+        left: 25%;
+    }
+    .brands li:nth-child(2) {
+        left: 110%;
+    }
+    .brands li:nth-child(1) {
+        left: 107%;
+    }
+    .brands li:nth-child(3) {
+        left: 120%;
+    }
+    .brands li:nth-child(4) {
+        top: 72%;
+        left: 125%;
+    }
+    .brands li:nth-child(5) {
+        top: 95%;
+        left: 124%;
+    }
+    .tab-pariwisata-3 .slide-content{
+        max-height: 100%;
+        overflow-y: hidden;
+    }
+}
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768.9px){
     .space-cursor,
     .space-cursor-2{
         display: none;
+    }
+    .popup-detail > h4 {
+        padding-top: 60px;
     }
     .potensi-box{
         width: 100%;
@@ -1973,7 +1956,7 @@ html,body{
         height: 100px;
         background-size: cover;
         max-width: 100%;
-        background: url(../images/bg-card-type-1-mobile.png) no-repeat center;
+        background: url(../images/bg-card-type-1-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .potensi-item .pic{
@@ -2006,11 +1989,12 @@ html,body{
         width: 100%;
         height: 600px;
         padding: 0 20px;
-        background: url(../images/bg-popup-3-mobile.png) no-repeat center;
+        background: url(../images/bg-popup-3-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .popup-detail h3{
         text-align: left;
+        margin-bottom: 20px;
     }
     .brands{
         column-count: 2;
@@ -2065,7 +2049,7 @@ html,body{
     .dialog-box{
         background: #333;
         width: 300px;
-        background: url(../images/bg-popup-1-mobile.png) no-repeat center;
+        background: url(../images/bg-popup-1-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .actor-name{
@@ -2125,18 +2109,16 @@ html,body{
         width: 60px;
         height: 60px;
     }
-    .info-pertanian{
-        margin-top: 20px;
-        background: none;
+    .pertanian-content-list {
+        height: 370px;
+        max-width: 100%;
     }
-    .pertanian-item{
-        position: relative;
+    .pertanian-content-list ul li {
+        display: block;
+    }
+    .pertanian-content-list .list-pertanian li .tl-left {
         width: 100%;
-        float: left;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        text-align: left !important;
+        margin-bottom: 5px;
     }
     .popup-detail .back-bt{
         top: auto;
@@ -2144,32 +2126,25 @@ html,body{
         left: 0;
         padding: 5px 40px 5px 20px;
     }
-    #geografis-pertanian h4,
-    #geografis-kelautan h4{
-        text-align: left;
-    }
     .fact-kelautan{
         padding-right: 0;
     }
     .fact-kelautan li{
         font-size: 14px;
     }
-    #geografis-kelautan .tab-wrap #tab-kelautan-2 h4{
-        font-size: 14px;
-        padding-right: 20px;
+    .tab-wrap {
+        display: block;
+        margin: 0;
     }
-    #geografis-kelautan .tab-wrap #tab-kelautan-2 p{
-        font-size: 14px;
+    .tab-wrap .list-icon {
+        height: 270px;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
-    #geografis-kelautan .tab-wrap #tab-kelautan-3 ul li{
-        font-size: 14px;
-    }
-    #geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    #geografis-kelautan .tab-wrap #tab-kelautan-4 .peran-kelautan li{
-        font-size: 14px;
+    .tab-wrap #tab-pertambangan-2 .list-icon li,
+    .tab-wrap #tab-kehutanan-2 .list-icon li {
+        width: 100%;
+        margin: 10px 0;
     }
     #geografis-kehutanan h4{
         padding-top: 40px;
@@ -2184,6 +2159,9 @@ html,body{
         white-space: nowrap;
         overflow-x: auto;
         margin-bottom: 20px;
+        display: flex;
+        flex-direction: initial;
+        align-items: center;
     }
     .tab-nav li,
     .tab-nav-2 li,
@@ -2191,7 +2169,7 @@ html,body{
         font-size: 12px;
         width: auto;
         float: none;
-        display: inline-block;
+        display: block;
         margin-right: 10px;
         margin-bottom: 0;
     }
@@ -2215,12 +2193,20 @@ html,body{
     .tab-ct.show,
     .tab-ct-2.show,
     .tab-ct-3.show{
-        transform: translateY(0) scale(1);
+        transform: translateY(5%) scale(1);
     }
     #tab-pertambangan-1 ul{
         padding-left: 0;
         height: 300px;
         overflow-y: auto;
+    }
+    #geografis-pertambangan #tab-pertambangan-2 ul {
+        padding-top: 20px;
+    }
+    #tab-pertambangan-3 .accordion {
+        height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .title-detail h4{
@@ -2298,7 +2284,7 @@ html,body{
     #tab-pariwisata-4.tab-ct-3,
     #tab-pariwisata-2.tab-ct-2,
     #tab-pariwisata-4.tab-ct-3{
-        height: 360px;
+        height: 410px;
         overflow-y: auto;
     }
     #tab-pariwisata-1 p{
@@ -2316,27 +2302,33 @@ html,body{
     .pariwisata-4-slider .item p{
         font-size: 14px;
     }
-    .medali-asian-games .item p{
-        font-size: 14px;
+    .list-medali {
+        display: block;
     }
-    .medali-asian-games .item{
-        padding: 0 10px;
-    }
-    .contingen .column{
-        width: 40%;
-    }
-    .contingen .column .pic{
+    .item-medali {
+        flex: unset;
         width: 100%;
-        height: auto;
     }
-    .contingen .column .text h4{
-        font-size: 16px;
+    .item-medali .pic img {
+        width: 100px;
     }
-    .contingen .column .text p{
-        font-size: 14px;
+    .table-sport {
+        width: 100%;
     }
-    .total-medali-sea-games .item{
-        text-align: center;
+    .tab-wrap .tab-content,
+    #geografis-kelautan .tab-wrap .tab-content {
+        max-height: 300px;
+    }
+    #olahraga .tab-wrap .tab-content {
+        max-height: 270px;
+    }
+    #pariwisata .tab-wrap .tab-content {
+        max-height: 350px;
+    }
+    .slide-content {
+        max-height: 360px;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     #geografis-pertambangan .tab-wrap #tab-pertambangan-1 li{
         font-size: 14px;
@@ -2350,17 +2342,6 @@ html,body{
     }
     .accordion .item.active .acc-ct{
         max-height: 160px;
-    }
-    #tab-kehutanan-1 ul{
-        padding-right: 0;
-    }
-    #tab-kehutanan-1 ul li{
-        font-size: 14px;
-    }
-    #tab-kehutanan-2{
-        padding-top: 0;
-        height: 320px;
-        overflow-y: scroll;
     }
     #tab-kehutanan-2 .item{
         width: 100%;
@@ -2383,12 +2364,12 @@ html,body{
         text-align: left;
         padding-left: 20px;
     }
-    #geografis-kehutanan .tab-wrap #tab-kehutanan-3 ul li{
-        font-size: 14px;
-    }
 
     .popup{
         top: calc(50% - 60px);
+    }
+    .content-pariwisata {
+        padding-top: 50px;
     }
     #pariwisata .tab-wrap{
         margin-top: 20px;
@@ -2414,8 +2395,9 @@ html,body{
     .tab-nav li a,
     .tab-nav-2 li a,
     .tab-nav-3 li a{
-        background: url(../images/tab-bt-mobile.png) no-repeat center;
+        background: url(../images/tab-bt-mobile.webp) no-repeat center;
         background-size: contain;
+        text-wrap: wrap;
     }
     .tab-nav li a:hover,
     .tab-nav li a.active,
@@ -2423,7 +2405,7 @@ html,body{
     .tab-nav-2 li a.active,
     .tab-nav-3 li a:hover,
     .tab-nav-3 li a.active{
-        background: url(../images/tab-bt-hover-mobile.png) no-repeat center;
+        background: url(../images/tab-bt-hover-mobile.webp) no-repeat center;
         background-size: contain;
     }
     .bisnis-ct .column{
